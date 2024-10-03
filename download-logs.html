@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <title>Download Logs | Smart Grant ChatTool</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5.3.3-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="sidebar" class="sidenav_bar">
+    <a href="index.html">
+        <div class="site_logo">
+            <img src="assets/images/logo1.png" alt="logo" title="logo">
+        </div>
+    </a>
+    <a href="index.html" class="sidebar_link"><i class="fa-solid fa-gauge sidenav_icon"></i> <span class="sidemenu_text">Dashboard</span></a>
+    <a href="ask-a-question.html" class="sidebar_link"><i class="fa-solid fa-clipboard-question sidenav_icon"></i> <span class="sidemenu_text">Ask A Question</span></a>
+    <a href="batch-processing.html" class="sidebar_link"><i class="fa-solid fa-sliders sidenav_icon"></i> <span class="sidemenu_text">Batch Process</span></a>
+    <a href="download-logs.html" class="sidebar_link"><i class="fa-solid fa-file-arrow-down sidenav_icon"></i> <span class="sidemenu_text">Download Logs</span></a>
+</div>
+
+<div id="main_container">
+    <div class="top_header">
+        <div>
+            <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
+        </div>
+        <div class="dropdown_box">
+            <span>Jhon Thompson</span>
+            <img src="assets/images/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+            <a href="login.html" class="login_btn">Login</a>
+            <div class="dropdown_content" id="profile_dropdown">
+                <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="content_body">
+
+        <div class="my-4">
+            <div class="d-flex align-items-center">
+                <h1 class="site_title pe-2">Download Logs</h1>
+                <img src="assets/images/logs.png" alt="Dinosaur" title="Dinosaur" class="title_icon">
+            </div>
+            <h4 class="mt-2">Below is a table showing who downloaded the files and when</h4>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table_font">
+                <thead>
+                    <tr class="table-dark">
+                        <td class="text-nowrap">User</td>
+                        <td class="text-nowrap">Date</td>
+                        <td class="text-nowrap">Time</td>
+                        <td class="text-nowrap">Timestamp</td>
+                        <td class="text-nowrap">Filename</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-secondary">
+                        <td>Oliver Smith</td>
+                        <td>02-09-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Amelia Jones</td>
+                        <td>12-09-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>William Brown</td>
+                        <td>23-09-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Isla Johnson</td>
+                        <td>28-09-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>James Taylor</td>
+                        <td>06-10-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Sophia Williams</td>
+                        <td>14-10-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td>Henry Davis</td>
+                        <td>18-10-2024</td>
+                        <td>00:25:32</td>
+                        <td>202406_429</td>
+                        <td>Responses_202406_429.csv</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

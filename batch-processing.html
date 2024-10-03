@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <title>Batch Processing | Smart Grant ChatTool</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5.3.3-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="sidebar" class="sidenav_bar">
+    <a href="index.html">
+        <div class="site_logo">
+            <img src="assets/images/logo1.png" alt="logo" title="logo">
+        </div>
+    </a>
+    <a href="index.html" class="sidebar_link"><i class="fa-solid fa-gauge sidenav_icon"></i> <span class="sidemenu_text">Dashboard</span></a>
+    <a href="ask-a-question.html" class="sidebar_link"><i class="fa-solid fa-clipboard-question sidenav_icon"></i> <span class="sidemenu_text">Ask A Question</span></a>
+    <a href="batch-processing.html" class="sidebar_link"><i class="fa-solid fa-sliders sidenav_icon"></i> <span class="sidemenu_text">Batch Process</span></a>
+    <a href="download-logs.html" class="sidebar_link"><i class="fa-solid fa-file-arrow-down sidenav_icon"></i> <span class="sidemenu_text">Download Logs</span></a>
+</div>
+
+<div id="main_container">
+    <div class="top_header">
+        <div>
+            <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
+        </div>
+        <div class="dropdown_box">
+            <span>Jhon Thompson</span>
+            <img src="assets/images/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+            <a href="login.html" class="login_btn">Login</a>
+            <div class="dropdown_content" id="profile_dropdown">
+                <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+            </div>
+        </div>
+    </div>
+    <div class="content_body">
+
+        <div class="mt-4">
+            <div class="d-flex align-items-center">
+                <h1 class="site_title pe-2">Batch Processing Tool</h1>
+                <img src="assets/images/file.png" alt="Dinosaur" title="Dinosaur" class="title_icon">
+            </div>
+            <h5 class="mt-2">Upload a CSV or Excel file with questions, or paste your comma-separated questions below. The tool will generate responses for each.</h5>
+        </div>
+
+        <div class="mb-4">
+            <h5 class="mt-4">Or paste your comma-separated questions here</h5>
+            <textarea rows="6" class="site_textarea"></textarea>
+        </div>
+
+        <div class="mb-4">
+            <h5 class="mt-4">Upload your CSV or Excel file</h5>
+            <div id="drop-area">
+                <img id="download-icon" src="assets/images/download.png" alt="Download Icon">
+                <h2>Drag and Drop File Here</h2>
+                <input type="file" id="fileElem" multiple accept=".csv, .xls, .xlsx" style="display:none;">
+                <label for="fileElem" id="fileLabel" class="select_file_text">or <span>browse file</span> from your device</label><br>
+                <span class="text-secondary">Limit 200MB per file - CSV, XLSX</span>
+            </div>
+            <div id="file-list"></div>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-danger textbox_btn">Submit</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const dropArea = document.getElementById('drop-area');
+    const fileInput = document.getElementById('fileElem');
+    const fileList = document.getElementById('file-list');
+
+    dropArea.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        dropArea.classList.add('hover');
+    });
+
+    dropArea.addEventListener('dragleave', () => {
+        dropArea.classList.remove('hover');
+    });
+
+    dropArea.addEventListener('drop', (event) => {
+        event.preventDefault();
+        dropArea.classList.remove('hover');
+        const files = event.dataTransfer.files;
+        handleFiles(files);
+    });
+
+    fileInput.addEventListener('change', (event) => {
+        const files = event.target.files;
+        handleFiles(files);
+    });
+
+    function handleFiles(files) {
+        fileList.innerHTML = ''; // Clear previous file names
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.textContent = file.name; // Show only the file name
+            fileList.appendChild(fileItem);
+        }
+    }
+</script>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
