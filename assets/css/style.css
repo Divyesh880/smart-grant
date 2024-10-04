@@ -320,6 +320,15 @@ body {
 .card_color3 { background: linear-gradient(45deg, #ee0979, #ff6a00) !important; }
 .card_color4 { background: linear-gradient(45deg, #d900ff, #6e00ff) !important; }
 
+.eye-icon {
+    position: absolute;
+    top: 67%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
 @media (min-width: 200px) and (max-width:1200px) {
     .card_box {
         flex-direction: column;
