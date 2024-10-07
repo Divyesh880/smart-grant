@@ -1,37 +1,42 @@
 body {
-    font-family: site_font4;
+    font-family: site_font;
     margin: 0;
 }
 
 @font-face {
     font-family: site_font;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+/* @font-face {
+    font-family: site_font;
     src: url(../fonts/Fredoka-Regular.ttf);
 }
 
 @font-face {
-    font-family: site_font2;
+    font-family: site_font;
     src: url(../fonts/Fredoka-Medium.ttf);
 }
 
 @font-face {
-    font-family: site_font3;
+    font-family: site_font;
     src: url(../fonts/Fredoka-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: site_font4;
+    font-family: site_font;
     src: url(../fonts/Outfit-Regular.ttf);
 }
 
 @font-face {
-    font-family: site_font5;
+    font-family: site_font;
     src: url(../fonts/Outfit-Medium.ttf);
 }
 
 @font-face {
-    font-family: site_font5;
+    font-family: site_font;
     src: url(../fonts/Outfit-SemiBold.ttf);
-}
+} */
 
 .site_logo {
     width: 100%;
@@ -51,7 +56,7 @@ body {
     background-color: #000;
     color: #fff;
     font-size: 18px;
-    font-family: 'site_font2';
+    font-family: 'site_font';
     padding: 7px 15px 10px;
     margin-left: 5px;
     transition: .7s;
@@ -64,7 +69,7 @@ body {
 
 .site_title {
     font-size: 55px;
-    font-family: 'site_font2';
+    font-family: 'site_font';
     margin-bottom: 3px;
 }
 
@@ -105,7 +110,7 @@ body {
 }
 
 .dropdown_image {
-    width: 50px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
     cursor: pointer;
     border-radius: 50%; /* Optional: makes the image circular */
 }
@@ -183,10 +188,15 @@ body {
 .fa-clipboard-question.sidenav_icon, .fa-file-arrow-down.sidenav_icon { font-size: 29px; }
 .fa-sliders.sidenav_icon { font-size: 22px; }
 
+.sidebar_icons {
+    margin-left: 5px;
+}
+
 .sidemenu_text {
     text-wrap: nowrap;
     font-size: 20px;
     font-family: site_font;
+    padding-left: 26px;
 }
 
 #main_container {
@@ -233,7 +243,7 @@ body {
 }
 
 .table_font { font-size: 18px; }
-.title_icon { height: 65px; }
+.title_icon { height: 55px; margin-bottom: 20px; }
 
 .login_box {
     box-shadow: 0px 0px 15px 5px #dddddd;
@@ -250,7 +260,7 @@ body {
 
 .box_title {
     font-size: 40px;
-    font-family: 'site_font2';
+    font-family: 'site_font';
 }
 
 #drop-area {
