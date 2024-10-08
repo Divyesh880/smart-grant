@@ -348,6 +348,7 @@ body {
 
 .table_functions_btn img {
     height: 20px;
+    cursor: pointer;
 }
 
 /* Hide Everything when printing */
