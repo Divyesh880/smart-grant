@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Table Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto; /* Center the table */
+            background-color: #ffffff; /* Default table background color */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #d9d9d9; /* Header color */
+        }
+        #fullscreenBtn, #printBtn {
+            margin: 20px;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        /* Hide Everything when printing */
+        @media print {
+            body * {
+                display: none; /* Hide everything */
+            }
+            #tableContainer, #tableContainer * {
+                display: revert; /* Show the table container and its content */
+            }
+            #tableContainer {
+                margin: 0; /* Remove margin for printed output */
+            }
+            table {
+                border-collapse: collapse; /* Keep the same table style */
+                width: 100%; /* Ensure full width */
+            }
+            th, td {
+                border: 1px solid #ddd; /* Ensure borders are printed */
+                padding: 8px; /* Maintain padding */
+                text-align: left; /* Maintain text alignment */
+            }
+            th {
+                background-color: #000 !important; /* Ensure header color is printed */
+            }
+            table {
+                background-color: #ffffff !important; /* Ensure table background is printed */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<button id="fullscreenBtn">Zoom Table</button>
+<button id="printBtn">Print Table</button>
+
+<h1>Print Table</h1>
+
+<div id="tableContainer">
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Mike Johnson</td>
+                <td>40</td>
+                <td>Chicago</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const printBtn = document.getElementById('printBtn');
+    const tableContainer = document.getElementById('tableContainer');
+
+    fullscreenBtn.addEventListener('click', () => {
+        if (tableContainer.requestFullscreen) {
+            tableContainer.requestFullscreen();
+        } else if (tableContainer.mozRequestFullScreen) { // Firefox
+            tableContainer.mozRequestFullScreen();
+        } else if (tableContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+            tableContainer.webkitRequestFullscreen();
+        } else if (tableContainer.msRequestFullscreen) { // IE/Edge
+            tableContainer.msRequestFullscreen();
+        }
+    });
+
+    printBtn.addEventListener('click', () => {
+        window.print(); // Directly print the current page
+    });
+
+    document.addEventListener('fullscreenchange', () => {
+        if (document.fullscreenElement) {
+            tableContainer.style.backgroundColor = "#ffffff"; // Keep table background white
+        } else {
+            tableContainer.style.backgroundColor = ""; // Reset to default
+        }
+    });
+</script>
+
+</body>
+</html>

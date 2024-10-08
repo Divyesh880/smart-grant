@@ -320,20 +320,15 @@ body {
     color: #fff;
 }
 
-.dashboard_cards .fa-solid {
-    font-size: 50px;
-    padding-bottom: 20px;
+.card_icon {
+    height: 55px;
+    margin-bottom: 20px;
 }
 
 .card_color1 { background: linear-gradient(45deg, #6a11cb, #2575fc) !important; }
 .card_color2 { background: linear-gradient(45deg, #00b09b, #96c93d) !important; }
 .card_color3 { background: linear-gradient(45deg, #ee0979, #ff6a00) !important; }
 .card_color4 { background: linear-gradient(45deg, #d900ff, #6e00ff) !important; }
-
-.card_icon {
-    height: 55px;
-    margin-bottom: 20px;
-}
 
 .eye-icon {
     position: absolute;
@@ -342,6 +337,27 @@ body {
     transform: translateY(-50%);
     cursor: pointer;
     font-size: 20px;
+}
+
+.table_functions_btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.table_functions_btn img {
+    height: 20px;
+}
+
+/* Hide Everything when printing */
+@media print {
+    .sidenav_bar, .top_header, #fullscreenBtn, #printBtn, .title_icon, .text_box_wrap , .taxtbox_label{
+        display: none; 
+    }
+    #main_container {
+        margin-left: 0 !important;
+    }
 }
 
 @media (min-width: 200px) and (max-width:1200px) {

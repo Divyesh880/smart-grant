@@ -73,6 +73,37 @@ window.onclick = function(event) {
     }
 }
 
+// Table Print and Fullscreen
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+const printBtn = document.getElementById('printBtn');
+const tableContainer = document.getElementById('tableContainer');
+
+fullscreenBtn.addEventListener('click', () => {
+    if (tableContainer.requestFullscreen) {
+        tableContainer.requestFullscreen();
+    } else if (tableContainer.mozRequestFullScreen) { // Firefox
+        tableContainer.mozRequestFullScreen();
+    } else if (tableContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        tableContainer.webkitRequestFullscreen();
+    } else if (tableContainer.msRequestFullscreen) { // IE/Edge
+        tableContainer.msRequestFullscreen();
+    }
+});
+
+printBtn.addEventListener('click', () => {
+    window.print(); // Directly print the current page
+});
+
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement) {
+        tableContainer.style.padding = "15px"; 
+        tableContainer.style.backgroundColor = "#ffffff"; // Keep table background white
+    } else {
+        tableContainer.style.padding = "";
+        tableContainer.style.backgroundColor = ""; // Reset to default
+    }
+});
+
 // Get the current URL
 const currentPath = window.location.pathname.split('/').pop();
 
