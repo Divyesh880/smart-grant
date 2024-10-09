@@ -73,42 +73,6 @@ window.onclick = function(event) {
     }
 }
 
-const dropArea = document.getElementById('drop-area');
-const fileInput = document.getElementById('fileElem');
-const fileList = document.getElementById('file-list');
-
-dropArea.addEventListener('dragover', (event) => {
-    event.preventDefault();
-    dropArea.classList.add('hover');
-});
-
-dropArea.addEventListener('dragleave', () => {
-    dropArea.classList.remove('hover');
-});
-
-dropArea.addEventListener('drop', (event) => {
-    event.preventDefault();
-    dropArea.classList.remove('hover');
-    const files = event.dataTransfer.files;
-    handleFiles(files);
-});
-
-fileInput.addEventListener('change', (event) => {
-    const files = event.target.files;
-    handleFiles(files);
-});
-
-function handleFiles(files) {
-    fileList.innerHTML = ''; // Clear previous file names
-    for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const fileItem = document.createElement('div');
-        fileItem.className = 'file-item';
-        fileItem.textContent = file.name; // Show only the file name
-        fileList.appendChild(fileItem);
-    }
-}
-
 // Table Print and Fullscreen
 const fullscreenBtn = document.getElementById('fullscreenBtn');
 const printBtn = document.getElementById('printBtn');

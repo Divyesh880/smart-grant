@@ -364,8 +364,13 @@ body {
         margin-left: 0 !important;
     }
     #tableContainer table thead tr {
-        background-color: #000 !important;
+        background-color: #212529 !important;
         color:#fff;
+        -webkit-print-color-adjust: exact;
+    }
+    #tableContainer table tbody tr {
+        background-color: #e2e3e5 !important;
+        color:#000;
         -webkit-print-color-adjust: exact;
     }
     #tableContainer table tr td {
