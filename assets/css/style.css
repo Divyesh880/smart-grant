@@ -275,8 +275,12 @@ body {
     border-color: #333;
 }
 
+.limit_text {
+    font-size: 15px;
+}
+
 .select_file_text {
-    font-size: 20px;
+    font-size: 19px;
     padding-top: 10px;
 }
 
@@ -401,7 +405,7 @@ body {
 
 @media screen and (max-width: 500px) {
     .text_box_wrap { flex-direction: column; }
-    .title_icon { width: 40px; }
+    .title_icon { width: 40px; height: auto; }
     .site_title { font-size: 32px; }
 }
 
