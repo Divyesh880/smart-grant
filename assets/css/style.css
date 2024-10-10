@@ -375,10 +375,10 @@ body {
     margin-bottom: 20px;
 }
 
-.card_color1 { background: linear-gradient(45deg, #6a11cb, #2575fc) !important; }
-.card_color2 { background: linear-gradient(45deg, #00b09b, #96c93d) !important; }
-.card_color3 { background: linear-gradient(45deg, #ee0979, #ff6a00) !important; }
-.card_color4 { background: linear-gradient(45deg, #d900ff, #6e00ff) !important; }
+.card_color1 { /*background: linear-gradient(45deg, #6a11cb, #2575fc) !important;*/ background-color: #8e65c1; }
+.card_color2 { /*background: linear-gradient(45deg, #00b09b, #96c93d) !important;*/ background-color: #8e65c1;}
+.card_color3 { /*background: linear-gradient(45deg, #ee0979, #ff6a00) !important;*/ background-color: #8e65c1;}
+.card_color4 { /*background: linear-gradient(45deg, #d900ff, #6e00ff) !important;*/ background-color: #8e65c1;}
 
 .eye-icon {
     position: absolute;
