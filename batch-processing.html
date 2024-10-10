@@ -17,54 +17,62 @@
 <body>
 
 <div id="sidebar" class="sidenav_bar">
-    <a href="index.html">
+    <a href="index.php">
         <div class="site_logo">
             <img src="assets/images/logo.png" alt="logo" title="logo">
         </div>
     </a>
-    <a href="index.html" class="sidebar_link">
+    <!-- <a href="index.php" class="sidebar_link">
         <img src="assets/images/Dashboard.png" alt="Dashboard" width="28" class="sidebar_icons"> 
         <span class="sidemenu_text">Dashboard</span>
-    </a>
-    <a href="ask-a-question.html" class="sidebar_link">
-        <img src="assets/images/Ask A Question.png" alt="Dashboard" width="28" class="sidebar_icons">
+    </a> -->
+    <a href="ask-a-question.php" class="sidebar_link">
+        <img src="assets/images/Ask_Question_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Ask A Question</span>
     </a>
-    <a href="batch-processing.html" class="sidebar_link">
-        <img src="assets/images/Batch Processing.png" alt="Dashboard" width="28" class="sidebar_icons">
+    <a href="batch-processing.php" class="sidebar_link">
+        <img src="assets/images/Batch_Processing_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Batch Process</span>
     </a>
-    <a href="download-logs.html" class="sidebar_link">
-        <img src="assets/images/Download Logs.png" alt="Dashboard" width="28" class="sidebar_icons">
+    <a href="download-logs.php" class="sidebar_link">
+        <img src="assets/images/Download_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Download Logs</span>
+    </a>
+    <a href="future-vision.php" class="sidebar_link">
+        <img src="assets/images/future_vision_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
+        <span class="sidemenu_text">Future Vision</span>
     </a>
 </div>
 
 <div id="main_container">
-    <div class="top_header">
-        <div>
-            <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
-        </div>
-        <div class="dropdown_box">
-            <span>John Thompson</span>
-            <img src="assets/images/Profile_top.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
-            <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
-            <div class="dropdown_content" id="profile_dropdown">
-                <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
-                <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
-                <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
-            </div>
+
+<div class="top_header">
+    <div>
+        <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
+    </div>
+    <div class="dropdown_box">
+        <span>John Thompson</span>
+        <img src="assets/images/Profile_top_orange.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+        <div class="d-inline-flex"><a href="login.php" class="login_btn">Login</a></div>
+        <div class="dropdown_content" id="profile_dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+            <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+            <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
         </div>
     </div>
+</div>
+    
     <div class="content_body">
 
         <div class="mt-4">
             <div class="d-flex align-items-center">
                 <h1 class="site_title pe-2">Batch Processing Tool</h1>
-                <img src="assets/images/Batch Processing-color.png" alt="Batch Processing" title="Batch Processing" class="title_icon">
+                <img src="assets/images/Batch_Processing_orange.png" alt="Batch Processing" title="Batch Processing" class="title_icon">
             </div>
             <h5 class="mt-2">Upload a CSV or Excel file with questions, or paste your comma-separated questions below. The tool will generate responses for each.</h5>
         </div>
+
+        <hr>
 
         <div class="mb-4">
             <h5 class="mt-4">Or paste your comma-separated questions here</h5>
@@ -84,7 +92,7 @@
         </div>
 
         <div>
-            <button type="submit" class="btn btn-dark textbox_btn">Submit</button>
+            <button type="submit" class="btn site_btn textbox_btn">Submit</button>
         </div>
 
     </div>

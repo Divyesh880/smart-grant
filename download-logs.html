@@ -17,64 +17,72 @@
 <body>
 
 <div id="sidebar" class="sidenav_bar">
-    <a href="index.html">
+    <a href="index.php">
         <div class="site_logo">
             <img src="assets/images/logo.png" alt="logo" title="logo">
         </div>
     </a>
-    <a href="index.html" class="sidebar_link">
+    <!-- <a href="index.php" class="sidebar_link">
         <img src="assets/images/Dashboard.png" alt="Dashboard" width="28" class="sidebar_icons"> 
         <span class="sidemenu_text">Dashboard</span>
-    </a>
-    <a href="ask-a-question.html" class="sidebar_link">
-        <img src="assets/images/Ask A Question.png" alt="Dashboard" width="28" class="sidebar_icons">
+    </a> -->
+    <a href="ask-a-question.php" class="sidebar_link">
+        <img src="assets/images/Ask_Question_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Ask A Question</span>
     </a>
-    <a href="batch-processing.html" class="sidebar_link">
-        <img src="assets/images/Batch Processing.png" alt="Dashboard" width="28" class="sidebar_icons">
+    <a href="batch-processing.php" class="sidebar_link">
+        <img src="assets/images/Batch_Processing_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Batch Process</span>
     </a>
-    <a href="download-logs.html" class="sidebar_link">
-        <img src="assets/images/Download Logs.png" alt="Dashboard" width="28" class="sidebar_icons">
+    <a href="download-logs.php" class="sidebar_link">
+        <img src="assets/images/Download_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Download Logs</span>
+    </a>
+    <a href="future-vision.php" class="sidebar_link">
+        <img src="assets/images/future_vision_orange.png" alt="Dashboard" width="28" class="sidebar_icons">
+        <span class="sidemenu_text">Future Vision</span>
     </a>
 </div>
 
 <div id="main_container">
-    <div class="top_header">
-        <div>
-            <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
-        </div>
-        <div class="dropdown_box">
-            <span>John Thompson</span>
-            <img src="assets/images/Profile_top.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
-            <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
-            <div class="dropdown_content" id="profile_dropdown">
-                <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
-                <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
-                <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
-            </div>
+
+<div class="top_header">
+    <div>
+        <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
+    </div>
+    <div class="dropdown_box">
+        <span>John Thompson</span>
+        <img src="assets/images/Profile_top_orange.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+        <div class="d-inline-flex"><a href="login.php" class="login_btn">Login</a></div>
+        <div class="dropdown_content" id="profile_dropdown">
+            <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+            <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+            <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
         </div>
     </div>
+</div>
+
     <div class="content_body">
 
         <div class="my-4">
             <div class="d-flex align-items-center">
                 <h1 class="site_title pe-2">Download Logs</h1>
-                <img src="assets/images/Download Logs-color.png" alt="Download Logs" title="Download Logs" class="title_icon">
+                <img src="assets/images/Download_orange.png" alt="Download Logs" title="Download Logs" class="title_icon">
             </div>
             <h4 class="mt-2">Below is a table showing who downloaded the files and when</h4>
         </div>
 
+        <hr>
+
         <div class="table_functions_btn">
-            <img src="assets/images/fullsreen.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
-            <img src="assets/images/print.png" id="printBtn" alt="Print or Download Table" title="Print or Download Table">
+            <img src="assets/images/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
+            <img src="assets/images/print_orange.png" id="printBtn" alt="Print or Download Table" title="Print or Download Table">
         </div>
 
         <div class="table-responsive" id="tableContainer">
             <table class="table table-bordered table_font">
                 <thead>
-                    <tr class="table-dark">
+                    <tr class="purple_bg_color">
                         <td class="text-nowrap">User</td>
                         <td class="text-nowrap">Date</td>
                         <td class="text-nowrap">Time</td>
