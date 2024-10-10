@@ -195,8 +195,8 @@ body {
 }
 
 .sidebar_link:hover, .sidebar_link.active {
-    color: #000;
-    background-color: #e3e3e3;
+    color: #fff;
+    background-color: #8e65c1
 }
 
 .sidenav_icon {
