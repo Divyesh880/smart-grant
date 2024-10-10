@@ -63,7 +63,6 @@ body {
     font-size: 18px;
     font-family: 'site_font';
     padding: 7px 15px;
-    margin-left: 5px;
     transition: .7s;
 }
 
@@ -78,6 +77,8 @@ body {
     margin-bottom: 3px;
     color: #8E65C1;
 }
+
+.orange_color { color: #fd7909; }
 
 .purple_bg_color {
     background-color: #8E65C1;
@@ -123,7 +124,9 @@ body {
 
 .dropdown_box {
     position: relative;
-    display: inline-block;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .dropdown_image {
@@ -264,6 +267,25 @@ body {
 .site_btn {
     background-color: #8E65C1;
     color: #fff;
+    border-radius: 6px;
+    border: 2px solid #8E65C1;
+}
+
+.site_btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #8E65C1;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #f3eaff !important;
+}
+.accordion-button:focus {
+    box-shadow: unset !important;
+}
+
+.question_font_size {
+    font-size: 18px;
 }
 
 .table_font { font-size: 18px; }
