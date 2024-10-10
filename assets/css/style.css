@@ -8,6 +8,11 @@ body {
     src: url(../fonts/Roboto-Medium.ttf);
 }
 
+@font-face {
+    font-family: site_font2;
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
 /* @font-face {
     font-family: site_font;
     src: url(../fonts/Fredoka-Regular.ttf);
@@ -52,8 +57,8 @@ body {
 .login_btn {
     text-decoration: none;
     border-radius: 8px;
-    border: 1px solid #000;
-    background-color: #000;
+    border: 1px solid #FD7909;
+    background-color: #FD7909;
     color: #fff;
     font-size: 18px;
     font-family: 'site_font';
@@ -71,6 +76,17 @@ body {
     font-size: 55px;
     font-family: 'site_font';
     margin-bottom: 3px;
+    color: #8E65C1;
+}
+
+.purple_bg_color {
+    background-color: #8E65C1;
+    color: #fff;
+}
+
+.purple_bg_color td {
+    background-color: #8E65C1;
+    color: #fff;
 }
 
 .sidenav_bar.collapsed .site_logo img {
@@ -78,8 +94,8 @@ body {
 }
 
 .top_header {
-    background-color: #fff;
-    color: #000;
+    background-color: #8E65C1;
+    color: #fff;
     top: 0;
     padding: 15px;
     display: flex;
@@ -94,6 +110,7 @@ body {
     font-size: 30px; 
     cursor: pointer; 
     transition: .5s;
+    color: #FD7909;
 }
 
 .top_header .header_profile_icon {
@@ -153,7 +170,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #f0f2f6;
+    background-color: #f3eaff;
     overflow-x: hidden;
     transition: width 0.5s;
     padding-top: 15px;
@@ -207,6 +224,8 @@ body {
 .content_body { 
     padding: 10px 30px;
     margin-top: 70px;
+    /* background-color: aliceblue; */
+    height: 100vh;
 }
 
 .text_box_wrap {
@@ -240,6 +259,11 @@ body {
     height: 55px;
     border: 0;
     width: 140px;
+}
+
+.site_btn {
+    background-color: #8E65C1;
+    color: #fff;
 }
 
 .table_font { font-size: 18px; }
@@ -353,6 +377,16 @@ body {
 .table_functions_btn img {
     height: 20px;
     cursor: pointer;
+}
+
+.card-body {
+    background-color: #ffeddf;
+}
+
+.card_description {
+    height: 100px;
+    display: flex;
+    align-items: center;
 }
 
 /* Hide Everything when printing */
