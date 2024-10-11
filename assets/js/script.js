@@ -40,6 +40,20 @@ function togglePasswordVisibility() {
     }
 }
 
+// Get the current URL
+const currentPath = window.location.pathname.split('/').pop();
+
+// Select all sidebar links
+const sidebarLinks = document.querySelectorAll('.sidebar_link');
+
+// Loop through each link to set the active class
+sidebarLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+        link.classList.add('active');
+    }
+});
+
 // Automatically open the sidebar when the page loads if wider than 768px
 window.onload = function() {
     if (isNavOpen) {
@@ -101,20 +115,6 @@ document.addEventListener('fullscreenchange', () => {
     } else {
         tableContainer.style.padding = "";
         tableContainer.style.backgroundColor = ""; // Reset to default
-    }
-});
-
-// Get the current URL
-const currentPath = window.location.pathname.split('/').pop();
-
-// Select all sidebar links
-const sidebarLinks = document.querySelectorAll('.sidebar_link');
-
-// Loop through each link to set the active class
-sidebarLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    if (linkPath === currentPath) {
-        link.classList.add('active');
     }
 });
 

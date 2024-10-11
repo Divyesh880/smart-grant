@@ -112,6 +112,15 @@ body {
     cursor: pointer; 
     transition: .5s;
     color: #FD7909;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    transition: .5s;
+}
+
+.top_header .sidebar_toggle_btn:hover {
+    color: #fff;
+    background-color: #FD7909;
 }
 
 .top_header .header_profile_icon {
@@ -188,7 +197,7 @@ body {
     margin: 12px 0;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #000;
     display: flex; 
     align-items: center; 
     transition: 0.3s;
@@ -227,8 +236,6 @@ body {
 .content_body { 
     padding: 10px 30px;
     margin-top: 70px;
-    /* background-color: aliceblue; */
-    height: 100vh;
 }
 
 .text_box_wrap {
@@ -447,16 +454,17 @@ body {
     .content_body { padding: 10px 10px; margin-top: 0; }
     .site_textbox { font-size: 20px; }
     .textbox_btn { font-size: 20px; height: 50px; }
-    .dropdown_image { width: 35px; }
+    /* .dropdown_image { width: 35px; } */
     #main_container { margin-left: 70px;}
     .profile_dropdown { top: 63px; }
     .top_header .sidebar_toggle_btn {
         position: absolute;
-        top: 10px;
+        padding: 1px 10px;
+        top: 13px;
         z-index: 2;
     }
     .sidenav_bar.open_collapsed + #main_container .top_header .sidebar_toggle_btn {
-        left: 250px;
+        left: 220px;
     }
     .sidenav_bar.collapsed + #main_container .top_header .sidebar_toggle_btn {
         left: 15px;
