@@ -103,8 +103,9 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    z-index: 2;
     width: -webkit-fill-available;
-    box-shadow: 0px 0px 10px 5px #c9c9c9;
+    /* box-shadow: 0px 0px 10px 5px #c9c9c9; */
 }
 
 .top_header .sidebar_toggle_btn {
@@ -234,14 +235,39 @@ body {
 }
 
 .content_body { 
-    padding: 10px 30px;
+    padding: 10px 30px 80px;
     margin-top: 70px;
 }
+
+.content_body_got_questions {
+    padding: 10px 30px 80px;
+    margin-top: 70px;
+    background-color: #ffffff73;
+    /* height: 90vh; */
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.content_body_got_questions::before {
+    content: "";
+    background-image: url(../images/content_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
 
 .text_box_wrap {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     gap: 15px;
 }
 
@@ -253,6 +279,7 @@ body {
     background-color: #efefef;
     font-size: 22px;
     height: 55px;
+    margin-bottom: 15px;
 }
 
 .site_textarea {
@@ -282,6 +309,17 @@ body {
     background-color: #fff;
     color: #000;
     border: 2px solid #8E65C1;
+}
+
+.add_btn {
+    color: #fd7909;
+    border-radius: 6px;
+    border: 2px solid #8E65C1;
+}
+
+.add_btn:hover {
+    color: #8E65C1;
+    border: 2px solid #fd7909;
 }
 
 .accordion-button:not(.collapsed) {
@@ -418,6 +456,16 @@ body {
     align-items: center;
 }
 
+.footer_block {
+    background: #8e65c1;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    z-index: 2;
+    width: -webkit-fill-available;
+}
+
 /* Hide Everything when printing */
 @media print {
     .sidenav_bar, .top_header, #fullscreenBtn, #printBtn, .title_icon, .text_box_wrap, .taxtbox_label{
@@ -451,7 +499,7 @@ body {
     .sidenav_bar { width: 70px; }
     .site_logo img { width: 70px; }
     .top_header { position: relative; }
-    .content_body { padding: 10px 10px; margin-top: 0; }
+    .content_body, .content_body_got_questions { padding: 10px 10px; margin-top: 0; }
     .site_textbox { font-size: 20px; }
     .textbox_btn { font-size: 20px; height: 50px; }
     /* .dropdown_image { width: 35px; } */

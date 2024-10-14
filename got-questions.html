@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div class="content_body">
+        <div class="content_body_got_questions">
 
             <div class="mt-4">
                 <div class="d-flex align-items-center">
@@ -86,9 +86,20 @@
                         <label class="fs-5 text-body-secondary taxtbox_label">You:</label>
                     </div>
                     <div class="text_box_wrap">
-                        <input type="text" placeholder="Type Your Question" class="site_textbox">
-                        <button type="button" class="btn site_btn textbox_btn">Submit</button>
+                        <div id="inputFields" class="w-100">
+                            <div>
+                                <input type="text" placeholder="Type Your Question" class="site_textbox">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Type Your Question" class="site_textbox">
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Type Your Question" class="site_textbox">
+                            </div>
+                        </div>
+                        <button type="button" onclick="addTextbox()" class="btn add_btn textbox_btn">+</button>
                     </div>
+                    <button type="button" class="btn site_btn textbox_btn">Submit</button>
                 </div>
             </div>
 
@@ -144,7 +155,31 @@
             </div>
 
         </div>
+
+        <div class="footer_block">
+            <footer>
+                <div class="text-center">
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+        
     </div>
+
+    <!-- Multiple Textbox On Click +(sign) Script Start -->
+    <script>
+        function addTextbox() {
+            const divEle = document.getElementById("inputFields");
+            const wrapper = document.createElement("div");
+            const iFeild = document.createElement("input");
+            iFeild.setAttribute("type", "text");
+            iFeild.setAttribute("placeholder", "Type Your Question");
+            iFeild.classList.add("site_textbox");
+            wrapper.appendChild(iFeild);
+            divEle.appendChild(wrapper);
+        }
+    </script>
+    <!-- Multiple Textbox On Click +(sign) Script End -->
 
     <script src="assets/js/script.js"></script>
 
