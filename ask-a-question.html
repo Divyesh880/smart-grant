@@ -32,10 +32,10 @@
             <img src="assets/images/Ask_Question_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Grant Success: Ask Away!</span>
         </a>
-        <a href="got-questions.html" class="sidebar_link">
+        <!-- <a href="got-questions.html" class="sidebar_link">
             <img src="assets/images/questions_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Got Questions? Let’s Ignite!</span>
-        </a>
+        </a> -->
         <a href="batch-processing.html" class="sidebar_link">
             <img src="assets/images/Batch_Processing_orange.png" alt="Batch Process" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Batch Process</span>
@@ -74,13 +74,13 @@
             <div class="mt-4">
                 <div class="d-flex align-items-center">
                     <h1 class="site_title pe-2">Grant Success: Ask Away!</h1>
-                    <img src="assets/images/Ask_Question_orange.png" alt="Question" title="Question" class="title_icon">
+                    <img src="assets/images/Ask_Question_orange.png" alt="Question" title="Question" class="title_icon print_none">
                 </div>
             </div>
 
             <hr>
 
-            <div>
+            <div class="print_none">
                 <div class="py-2">
                     <div>
                         <label class="fs-5 text-body-secondary taxtbox_label">You:</label>
@@ -93,6 +93,36 @@
             </div>
 
             <div>
+                <div class="table_functions_btn print_none">
+                    <img src="assets/images/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
+                        title="Fullsreen View">
+                    <img src="assets/images/print_orange.png" id="printBtn" alt="Print or Download Table"
+                        title="Print or Download Table">
+                </div>
+    
+                <div class="table-responsive" id="tableContainer">
+                    <table class="table table-bordered table_font">
+                        <thead>
+                            <tr class="purple_bg_color">
+                                <td class="text-nowrap">Response Time</td>
+                                <td class="text-nowrap">Document Source</td>
+                                <td class="text-nowrap">Question</td>
+                                <td class="text-nowrap">Answer</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-light">
+                                <td>10ms</td>
+                                <td>Smart Tool</td>
+                                <td>Who is eligible to apply for the Smart Grant?</td>
+                                <td>Eligibility varies by program, but generally includes non-profit organizations, educational institutions, and sometimes individuals or small businesses working on innovative projects.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="print_none">
 
                 <div class="mb-4">
                     <h2 class="orange_color">Frequently Asked Questions?</h2>
@@ -142,54 +172,6 @@
                 </div>
 
             </div>
-
-            <!-- <div class="table_functions_btn">
-                <img src="assets/images/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
-                    title="Fullsreen View">
-                <img src="assets/images/print_orange.png" id="printBtn" alt="Print or Download Table"
-                    title="Print or Download Table">
-            </div>
-
-            <div class="table-responsive" id="tableContainer">
-                <table class="table table-bordered table_font">
-                    <thead>
-                        <tr class="purple_bg_color">
-                            <td class="text-nowrap">Model</td>
-                            <td class="text-nowrap">Output</td>
-                            <td class="text-nowrap">Input Token</td>
-                            <td class="text-nowrap">Cost</td>
-                            <td class="text-nowrap">Response Time (sec)</td>
-                            <td class="text-nowrap">Document Source</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="table-secondary">
-                            <td>Model</td>
-                            <td>Output</td>
-                            <td>Input Token</td>
-                            <td>Cost</td>
-                            <td>Response Time (sec)</td>
-                            <td>Document Source</td>
-                        </tr>
-                        <tr class="table-secondary">
-                            <td>Model</td>
-                            <td>Output</td>
-                            <td>Input Token</td>
-                            <td>Cost</td>
-                            <td>Response Time (sec)</td>
-                            <td>Document Source</td>
-                        </tr>
-                        <tr class="table-secondary">
-                            <td>Model</td>
-                            <td>Output</td>
-                            <td>Input Token</td>
-                            <td>Cost</td>
-                            <td>Response Time (sec)</td>
-                            <td>Document Source</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
 
         </div>
 

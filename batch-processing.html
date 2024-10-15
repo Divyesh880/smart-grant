@@ -30,10 +30,10 @@
             <img src="assets/images/Ask_Question_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Grant Success: Ask Away!</span>
         </a>
-        <a href="got-questions.html" class="sidebar_link">
+        <!-- <a href="got-questions.html" class="sidebar_link">
             <img src="assets/images/questions_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Got Questions? Let’s Ignite!</span>
-        </a>
+        </a> -->
         <a href="batch-processing.html" class="sidebar_link">
             <img src="assets/images/Batch_Processing_orange.png" alt="Batch Process" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Batch Process</span>
@@ -71,19 +71,19 @@
         <div class="mt-4">
             <div class="d-flex align-items-center">
                 <h1 class="site_title pe-2">Batch Processing Tool</h1>
-                <img src="assets/images/Batch_Processing_orange.png" alt="Batch Processing" title="Batch Processing" class="title_icon">
+                <img src="assets/images/Batch_Processing_orange.png" alt="Batch Processing" title="Batch Processing" class="title_icon print_none">
             </div>
-            <h5 class="mt-2">Upload a CSV or Excel file with questions, or paste your comma-separated questions below. The tool will generate responses for each.</h5>
+            <h5 class="mt-2 print_none">Upload a CSV or Excel file with questions, or paste your comma-separated questions below. The tool will generate responses for each.</h5>
         </div>
 
         <hr>
 
-        <div class="mb-4">
+        <div class="mb-4 print_none">
             <h5 class="mt-4">Or paste your comma-separated questions here</h5>
-            <textarea rows="6" class="site_textarea"></textarea>
+            <textarea rows="3" placeholder="Type Your Questions" class="site_textarea"></textarea>
         </div>
 
-        <div class="mb-4">
+        <div class="mb-4 print_none">
             <h5 class="mt-4">Upload your CSV or Excel file</h5>
             <div id="drop-area">
                 <img id="download-icon" src="assets/images/upload.png" alt="Upload Icon">
@@ -95,8 +95,116 @@
             <div id="file-list"></div>
         </div>
 
-        <div>
+        <div class="print_none">
             <button type="submit" class="btn site_btn textbox_btn">Submit</button>
+        </div>
+
+        <div>
+            <div class="table_functions_btn print_none">
+                <img src="assets/images/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
+                    title="Fullsreen View">
+                <img src="assets/images/print_orange.png" id="printBtn" alt="Print or Download Table"
+                    title="Print or Download Table">
+            </div>
+
+            <div class="table-responsive" id="tableContainer">
+                <table class="table table-bordered table_font">
+                    <thead>
+                        <tr class="purple_bg_color">
+                            <td class="text-nowrap"></td>
+                            <td class="text-nowrap">Question</td>
+                            <td class="text-nowrap">Answer</td>
+                            <td class="text-nowrap">CSV or DOC</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            <td>1</td>
+                            <td>What is the typical funding amount for a Smart Grant?</td>
+                            <td>Funding amounts can vary widely depending on the program and project scope, usually ranging from a few thousand to several hundred thousand dollars.</td>
+                            <td>
+                                <div class="table_icon">
+                                    <img src="assets/images/csv.png" alt="Download CSV File" title="Download CSV File">
+                                    <img src="assets/images/doc.png" alt="Download DOC File" title="Download DOC File">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-light">
+                            <td>2</td>
+                            <td>Are there restrictions on how the grant funds can be used?</td>
+                            <td>Yes, funds are typically designated for specific project expenses, such as personnel, materials, and overhead. Always refer to the specific grant guidelines for details.</td>
+                            <td>
+                                <div class="table_icon">
+                                    <img src="assets/images/csv.png" alt="Download CSV File" title="Download CSV File">
+                                    <img src="assets/images/doc.png" alt="Download DOC File" title="Download DOC File">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-light">
+                            <td>3</td>
+                            <td>What are the reporting requirements after receiving a Smart Grant?</td>
+                            <td>Grantees are usually required to submit periodic progress reports and a final report detailing project outcomes, expenditures, and impacts.</td>
+                            <td>
+                                <div class="table_icon">
+                                    <img src="assets/images/csv.png" alt="Download CSV File" title="Download CSV File">
+                                    <img src="assets/images/doc.png" alt="Download DOC File" title="Download DOC File">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="print_none">
+
+            <div class="mb-4">
+                <h2 class="orange_color">Frequently Asked Questions?</h2>
+            </div>
+
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong class="question_font_size">What is the typical funding amount for a Smart Grant?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Funding amounts can vary widely depending on the program and project scope, usually ranging from a few thousand to several hundred thousand dollars.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong class="question_font_size">Are there restrictions on how the grant funds can be used?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Yes, funds are typically designated for specific project expenses, such as personnel, materials, and overhead. Always refer to the specific grant guidelines for details.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong class="question_font_size">What are the reporting requirements after receiving a Smart Grant?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>Grantees are usually required to submit periodic progress reports and a final report detailing project outcomes, expenditures, and impacts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
