@@ -8,17 +8,17 @@
         <img src="assets/images/Dashboard.png" alt="Dashboard" width="28" class="sidebar_icons"> 
         <span class="sidemenu_text">Dashboard</span>
     </a> -->
-    <a href="ask-a-question.html" class="sidebar_link">
+    <a href="grant-success.html" class="sidebar_link">
         <img src="assets/images/Ask_Question_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Grant Success: Ask Away!</span>
     </a>
-    <a href="got-questions.html" class="sidebar_link">
+    <!-- <a href="got-questions.html" class="sidebar_link">
         <img src="assets/images/questions_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
         <span class="sidemenu_text">Got Questions? Let’s Ignite!</span>
-    </a>
+    </a> -->
     <a href="batch-processing.html" class="sidebar_link">
         <img src="assets/images/Batch_Processing_orange.png" alt="Batch Process" width="28" class="sidebar_icons">
-        <span class="sidemenu_text">Batch Process</span>
+        <span class="sidemenu_text">Batch Processing</span>
     </a>
     <a href="download-logs.html" class="sidebar_link">
         <img src="assets/images/Download_orange.png" alt="Download Logs" width="28" class="sidebar_icons">
