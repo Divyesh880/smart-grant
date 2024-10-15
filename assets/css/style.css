@@ -234,23 +234,17 @@ body {
     margin-left: 350px; 
 }
 
+.content_body_height { height: 90vh; }
+
 .content_body { 
     padding: 10px 30px 80px;
     margin-top: 70px;
-}
-
-.content_body_got_questions {
-    padding: 10px 30px 80px;
-    margin-top: 70px;
-    background-color: #ffffff73;
-    /* height: 90vh; */
+    background-color: #fff0;
     position: relative;
-    /* overflow: hidden; */
 }
 
-.content_body_got_questions::before {
+.content_body::before {
     content: "";
-    background-image: url(../images/content_bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -263,6 +257,21 @@ body {
     z-index: -1;
 }
 
+.content_body_grant_success::before {
+    background-image: url(../images/grant-success-bg.png);
+}
+
+.content_body_batch_processing::before {
+    background-image: url(../images/batch-process-bg.png);
+}
+
+.content_body_download_logs::before {
+    background-image: url(../images/download-logs-bg.png);
+}
+
+.content_body_future_vision::before {
+    background-image: url(../images/future-vision-bg.png);
+}
 
 .text_box_wrap {
     display: flex;
@@ -360,6 +369,7 @@ body {
     width: auto;
     padding: 10px 0;
     text-align: center;
+    background-color: #fff;
 }
 
 #drop-area.hover {
