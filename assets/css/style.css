@@ -246,7 +246,7 @@ body {
 
 .content_body::before {
     content: "";
-    background-image: url(../images/background/grant_background_opacity.png);
+    background-image: url(../images/background/main-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -458,6 +458,8 @@ body {
 
 .card-body {
     background-color: #ffeddf;
+    border-radius: 7px;
+    border: 1px solid #d2d2d2;
 }
 
 .card_description {
@@ -487,7 +489,7 @@ body {
     cursor: pointer;
 }
 
-/* Hide Everything when printing */
+/* Media Print Start */
 @media print {
     .sidenav_bar, .top_header, .print_none{
         display: none; 
@@ -509,6 +511,21 @@ body {
         font-size: 14px;
     }
 }
+/* Media Print End */
+
+@media (min-width: 1421px) and (max-width:1561px) {
+    .card-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+    }
+
+    .card_description {
+        height: 130px;
+    }
+}
+
 
 @media (min-width: 200px) and (max-width:1200px) {
     .card_box {
