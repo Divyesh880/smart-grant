@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
     <title>Batch Processing | Smart Grant ChatTool</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
@@ -19,59 +19,60 @@
     <div id="sidebar" class="sidenav_bar">
         <a href="index.html">
             <div class="site_logo">
-                <img src="assets/images/logo.png" alt="logo" title="logo">
+                <img src="assets/images/logo/logo.png" alt="logo" title="logo">
             </div>
         </a>
         <!-- <a href="index.html" class="sidebar_link">
-            <img src="assets/images/Dashboard.png" alt="Dashboard" width="28" class="sidebar_icons"> 
+            <img src="assets/images/sidebar/dashboard_orange.png" alt="Dashboard" width="28" class="sidebar_icons"> 
             <span class="sidemenu_text">Dashboard</span>
         </a> -->
         <a href="grant-success.html" class="sidebar_link">
-            <img src="assets/images/Ask_Question_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/grant_success_orange.png" alt="Grant Success" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Grant Success: Ask Away!</span>
         </a>
         <!-- <a href="got-questions.html" class="sidebar_link">
-            <img src="assets/images/questions_orange.png" alt="Ask A Question" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/got_questions_orange.png" alt="Got Questions" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Got Questions? Let’s Ignite!</span>
         </a> -->
         <a href="batch-processing.html" class="sidebar_link">
-            <img src="assets/images/Batch_Processing_orange.png" alt="Batch Process" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/batch_processing_orange.png" alt="Batch Process" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Batch Processing</span>
         </a>
         <a href="download-logs.html" class="sidebar_link">
-            <img src="assets/images/Download_orange.png" alt="Download Logs" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/download_logs_orange.png" alt="Download Logs" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Download Logs</span>
         </a>
         <a href="future-vision.html" class="sidebar_link">
-            <img src="assets/images/future_vision_orange.png" alt="Future Vision" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/future_vision_orange.png" alt="Future Vision" width="28" class="sidebar_icons">
             <span class="sidemenu_text">Future Vision</span>
         </a>
     </div>
 
 <div id="main_container">
 
-<div class="top_header">
-    <div>
-        <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span> 
-    </div>
-    <div class="dropdown_box">
-        <span>John Thompson</span>
-        <img src="assets/images/Profile_top_orange.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
-        <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
-        <div class="dropdown_content" id="profile_dropdown">
-            <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
-            <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
-            <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+    <div class="top_header">
+        <div>
+            <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span>
+        </div>
+        <div class="dropdown_box">
+            <span>John Thompson</span>
+            <img src="assets/images/header/profile_orange.png" alt="Profile" class="dropdown_image"
+                onclick="toggleDropdown()">
+            <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
+            <div class="dropdown_content" id="profile_dropdown">
+                <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+            </div>
         </div>
     </div>
-</div>
     
     <div class="content_body content_body_batch_processing">
 
         <div class="mt-4">
             <div class="d-flex align-items-center">
                 <h1 class="site_title pe-2">Batch Processing Tool</h1>
-                <img src="assets/images/Batch_Processing_orange.png" alt="Batch Processing" title="Batch Processing" class="title_icon print_none">
+                <img src="assets/images/sidebar/batch_processing_orange.png" alt="Batch Processing" title="Batch Processing" class="title_icon print_none">
             </div>
             <h5 class="mt-2 print_none">Upload a CSV or Excel file with questions, or paste your comma-separated questions below. The tool will generate responses for each.</h5>
         </div>
@@ -86,7 +87,7 @@
         <div class="mb-4 print_none">
             <h5 class="mt-4">Upload your CSV or Excel file</h5>
             <div id="drop-area">
-                <img id="download-icon" src="assets/images/upload.png" alt="Upload Icon">
+                <img id="download-icon" src="assets/images/icons/upload.png" alt="Upload Icon">
                 <h2>Drag and Drop File Here</h2>
                 <input type="file" id="fileElem" multiple accept=".csv, .xls, .xlsx" style="display:none;">
                 <label for="fileElem" id="fileLabel" class="select_file_text">or <span>browse file</span> from your device</label><br>
@@ -101,9 +102,9 @@
 
         <div>
             <div class="table_functions_btn print_none">
-                <img src="assets/images/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
+                <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
                     title="Fullsreen View">
-                <img src="assets/images/print_orange.png" id="printBtn" alt="Print or Download Table"
+                <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table"
                     title="Print or Download Table">
             </div>
 
@@ -126,8 +127,8 @@
                             <td>Funding amounts can vary widely depending on the program and project scope, usually ranging from a few thousand to several hundred thousand dollars.</td>
                             <td>
                                 <div class="table_icon">
-                                    <img src="assets/images/csv.png" alt="Download CSV File" title="Download CSV File">
-                                    <img src="assets/images/doc.png" alt="Download DOC File" title="Download DOC File">
+                                    <img src="assets/images/icons/csv.png" alt="Download CSV File" title="Download CSV File">
+                                    <img src="assets/images/icons/doc.png" alt="Download DOC File" title="Download DOC File">
                                 </div>
                             </td>
                         </tr>
@@ -138,8 +139,8 @@
                             <td>Yes, funds are typically designated for specific project expenses, such as personnel, materials, and overhead. Always refer to the specific grant guidelines for details.</td>
                             <td>
                                 <div class="table_icon">
-                                    <img src="assets/images/csv.png" alt="Download CSV File" title="Download CSV File">
-                                    <img src="assets/images/doc.png" alt="Download DOC File" title="Download DOC File">
+                                    <img src="assets/images/icons/csv.png" alt="Download CSV File" title="Download CSV File">
+                                    <img src="assets/images/icons/doc.png" alt="Download DOC File" title="Download DOC File">
                                 </div>
                             </td>
                         </tr>
@@ -150,8 +151,8 @@
                             <td>Grantees are usually required to submit periodic progress reports and a final report detailing project outcomes, expenditures, and impacts.</td>
                             <td>
                                 <div class="table_icon">
-                                    <img src="assets/images/csv.png" alt="Download CSV File" title="Download CSV File">
-                                    <img src="assets/images/doc.png" alt="Download DOC File" title="Download DOC File">
+                                    <img src="assets/images/icons/csv.png" alt="Download CSV File" title="Download CSV File">
+                                    <img src="assets/images/icons/doc.png" alt="Download DOC File" title="Download DOC File">
                                 </div>
                             </td>
                         </tr>
