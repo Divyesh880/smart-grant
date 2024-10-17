@@ -240,12 +240,13 @@ body {
 .content_body { 
     padding: 10px 30px 80px;
     margin-top: 70px;
-    background-color: #ffffffd1;
+    /* background-color: #ffffffd1; */
     position: relative;
 }
 
 .content_body::before {
     content: "";
+    background-image: url(../images/grant-background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -258,7 +259,7 @@ body {
     z-index: -1;
 }
 
-.content_body_grant_success::before {
+/* .content_body_grant_success::before {
     background-image: url(../images/grant-success-bg.png);
 }
 
@@ -272,7 +273,7 @@ body {
 
 .content_body_future_vision::before {
     background-image: url(../images/future-vision-bg.png);
-}
+} */
 
 .text_box_wrap {
     display: flex;
