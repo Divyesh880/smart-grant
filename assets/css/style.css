@@ -552,9 +552,8 @@ body {
     .sidenav_bar { width: 70px; }
     .site_logo img { width: 70px; }
     .top_header { position: relative; z-index: unset; }
-    .footer_block { z-index: unset; }
+    .footer_block { position: relative; z-index: unset; }
     .content_body, .content_body_got_questions { padding: 10px 10px; margin-top: 0; }
-    .content_body_height { padding-bottom: 100px !important; }
     .site_textbox { font-size: 20px; }
     .textbox_btn { font-size: 20px; height: 50px; }
     /* .dropdown_image { width: 35px; } */
