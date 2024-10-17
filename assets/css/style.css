@@ -246,7 +246,7 @@ body {
 
 .content_body::before {
     content: "";
-    background-image: url(../images/grant-background.png);
+    background-image: url(../images/grant-background-opacity.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
