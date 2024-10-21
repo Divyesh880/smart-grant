@@ -1,6 +1,8 @@
 <div class="top_header">
     <div>
-        <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span>
+    <span onclick="toggleNav()">
+        <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-list-ul"></i>
+    </span>
     </div>
     <div class="dropdown_box">
         <span>John Thompson</span>

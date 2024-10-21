@@ -52,7 +52,9 @@
 
     <div class="top_header">
         <div>
-            <span class="sidebar_toggle_btn" onclick="toggleNav()">&#9776;</span>
+            <span onclick="toggleNav()">
+                <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
+            </span>
         </div>
         <div class="dropdown_box">
             <span>John Thompson</span>
@@ -102,10 +104,8 @@
 
         <div>
             <div class="table_functions_btn print_none">
-                <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
-                    title="Fullsreen View">
-                <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table"
-                    title="Print or Download Table">
+                <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
+                <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table" title="Print or Download Table">
             </div>
 
             <div class="table-responsive" id="tableContainer">
