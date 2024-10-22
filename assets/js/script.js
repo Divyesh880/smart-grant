@@ -25,15 +25,15 @@ function closeNav() {
     document.getElementById("sidebar").classList.remove('open_collapsed');
 }
 
-function iconChange(element) {
-    if (element.classList.contains("fa-bars")) {
-        element.classList.remove("fa-bars");
-        element.classList.add("fa-list-ul");
-    } else {
-        element.classList.remove("fa-list-ul");
-        element.classList.add("fa-bars");
-    }
-}
+// function iconChange(element) {
+//     if (element.classList.contains("fa-bars")) {
+//         element.classList.remove("fa-bars");
+//         element.classList.add("fa-list-ul");
+//     } else {
+//         element.classList.remove("fa-list-ul");
+//         element.classList.add("fa-bars");
+//     }
+// }
 
 function togglePasswordVisibility() {
     const passwordInput = document.getElementById('password');
