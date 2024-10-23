@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
-    <title>Got Questions? Let’s Ignite! | Smart Grant ChatTool</title>
+    <title>Grant Success: Ask Away! | Smart Grant ChatTool</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -71,41 +71,60 @@
             </div>
         </div>
 
-        <div class="content_body content_body_got_questions content_body_height">
+        <div class="content_body content_body_grant_success content_body_height">
 
             <div class="mt-4">
                 <div class="d-flex align-items-center">
-                    <h1 class="site_title pe-2">Got Questions? Let’s Ignite!</h1>
-                    <img src="assets/images/sidebar/got_questions_orange.png" alt="Got Questions" title="Got Questions" class="title_icon">
+                    <h1 class="site_title pe-2">Single Question Grant Authoring</h1>
+                    <img src="assets/images/sidebar/single_question_orange.png" alt="Single Question" title="Single Question" class="title_icon print_none">
                 </div>
             </div>
 
             <hr>
 
-            <div class="mb-4">
+            <div class="print_none">
                 <div class="py-2">
                     <div>
                         <label class="fs-5 text-body-secondary taxtbox_label">You:</label>
                     </div>
                     <div class="text_box_wrap">
-                        <div id="inputFields" class="w-100">
-                            <div>
-                                <input type="text" placeholder="Type Your Question" class="site_textbox">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Type Your Question" class="site_textbox">
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Type Your Question" class="site_textbox">
-                            </div>
-                        </div>
-                        <button type="button" onclick="addTextbox()" class="btn add_btn textbox_btn">+</button>
+                        <input type="text" placeholder="Type Your Question" class="site_textbox">
+                        <button type="button" class="btn site_btn textbox_btn">Submit</button>
                     </div>
-                    <button type="button" class="btn site_btn textbox_btn">Submit</button>
                 </div>
             </div>
 
-            <div class="faq_section">
+            <div>
+                <div class="table_functions_btn print_none">
+                    <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
+                        title="Fullsreen View">
+                    <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table"
+                        title="Print or Download Table">
+                </div>
+    
+                <div class="table-responsive" id="tableContainer">
+                    <table class="table table-bordered table_font">
+                        <thead>
+                            <tr class="purple_bg_color">
+                                <td class="text-nowrap">Response Time</td>
+                                <td class="text-nowrap">Document Source</td>
+                                <td class="text-nowrap">Question</td>
+                                <td class="text-nowrap">Answer</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-light">
+                                <td>10ms</td>
+                                <td>Smart Tool</td>
+                                <td>Who is eligible to apply for the Smart Grant?</td>
+                                <td>Eligibility varies by program, but generally includes non-profit organizations, educational institutions, and sometimes individuals or small businesses working on innovative projects.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="print_none">
 
                 <div class="mb-4">
                     <h2 class="orange_color">Frequently Asked Questions?</h2>
@@ -116,13 +135,13 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <strong class="question_font_size">What is the typical funding amount for a Smart Grant?</strong>
+                                <strong class="question_font_size">Who is eligible to apply for the Smart Grant?</strong>
                             </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Funding amounts can vary widely depending on the program and project scope, usually ranging from a few thousand to several hundred thousand dollars.</p>
+                                <p>Eligibility varies by program, but generally includes non-profit organizations, educational institutions, and sometimes individuals or small businesses working on innovative projects.</p>
                             </div>
                         </div>
                     </div>
@@ -130,12 +149,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <strong class="question_font_size">Are there restrictions on how the grant funds can be used?</strong>
+                                <strong class="question_font_size">How do I apply for a Smart Grant?</strong>
                             </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Yes, funds are typically designated for specific project expenses, such as personnel, materials, and overhead. Always refer to the specific grant guidelines for details.</p>
+                                <p>Applications can typically be submitted through the designated online portal. You'll need to create an account, fill out the application form, and provide necessary documentation.</p>
                             </div>
                         </div>
                     </div>
@@ -143,12 +162,12 @@
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <strong class="question_font_size">What are the reporting requirements after receiving a Smart Grant?</strong>
+                                <strong class="question_font_size">What documents are required for the application?</strong>
                             </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <p>Grantees are usually required to submit periodic progress reports and a final report detailing project outcomes, expenditures, and impacts.</p>
+                                <p>Commonly required documents include a project proposal, budget outline, proof of eligibility, and any relevant organizational documents.</p>
                             </div>
                         </div>
                     </div>
@@ -165,23 +184,8 @@
                 </div>
             </footer>
         </div>
-        
-    </div>
 
-    <!-- Multiple Textbox On Click +(sign) Script Start -->
-    <script>
-        function addTextbox() {
-            const divEle = document.getElementById("inputFields");
-            const wrapper = document.createElement("div");
-            const iFeild = document.createElement("input");
-            iFeild.setAttribute("type", "text");
-            iFeild.setAttribute("placeholder", "Type Your Question");
-            iFeild.classList.add("site_textbox");
-            wrapper.appendChild(iFeild);
-            divEle.appendChild(wrapper);
-        }
-    </script>
-    <!-- Multiple Textbox On Click +(sign) Script End -->
+    </div>
 
     <script src="assets/js/script.js"></script>
 

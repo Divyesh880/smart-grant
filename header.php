@@ -1,8 +1,9 @@
 <div class="top_header">
     <div>
-    <span onclick="toggleNav()">
-        <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-list-ul"></i>
-    </span>
+        <span onclick="toggleNav()">
+            <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
+            <!-- <i class="fa">&#xf0c9;</i> -->
+        </span>
     </div>
     <div class="dropdown_box">
         <span>John Thompson</span>

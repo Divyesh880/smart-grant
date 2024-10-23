@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
-    <title>Login | Smart Grant ChatTool</title>
+    <title>Download Logs | Smart Grant ChatTool</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -69,33 +69,72 @@
         </div>
     </div>
 
-    <div class="content_body content_body_height">
+    <div class="content_body content_body_download_logs content_body_height">
 
-        <div class="mt-4">
+        <div class="my-4">
             <div class="d-flex align-items-center">
-                <h1 class="site_title pe-2">Welcome To Smart Grant</h1>
+                <h1 class="site_title pe-2">Grant Response History</h1>
+                <img src="assets/images/sidebar/grant_response_history_orange.png" alt="Grant Response History" title="Grant Response History" class="title_icon print_none">
             </div>
+            <h4 class="mt-2">Below is a table showing who downloaded the files and when</h4>
         </div>
 
-        <div class="login_box">
-            <div class="box_text">
-                <h2 class="text-center box_title">Login</h2>
-                <p class="text-center">Login with your Username and Password</p>
-            </div>
-            <form>
-                <div class="mb-3">
-                    <label for="username" class="fs-5 text-body-secondary">Username</label>
-                    <input type="text" id="username" placeholder="Username" class="site_textbox" required>
-                </div>
-                <div class="mb-4 position-relative">
-                    <label for="password" class="fs-5 text-body-secondary">Password</label>
-                    <input type="password" id="password" placeholder="Password" class="site_textbox" required>
-                    <span id="togglePassword" class="eye-icon" onclick="togglePasswordVisibility()">
-                        <i class="fas fa-eye" id="eyeIcon"></i>
-                    </span>
-                </div>
-                <button type="submit" class="btn site_btn textbox_btn mt-2">Login</button>
-            </form>
+        <hr>
+
+        <div class="table_functions_btn print_none">
+            <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
+            <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table" title="Print or Download Table">
+        </div>
+
+        <div class="table-responsive" id="tableContainer">
+            <table class="table table-bordered table_font">
+                <thead>
+                    <tr class="purple_bg_color">
+                        <td class="text-nowrap">Username</td>
+                        <td class="text-nowrap">Date</td>
+                        <td class="text-nowrap">Questions</td>
+                        <td class="text-nowrap">Filename</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-light">
+                        <td>Oliver Smith</td>
+                        <td>02-09-2024</td>
+                        <td>Who is eligible to apply for the Smart Grant?</td>
+                        <td>eligible_for_smart_grant.csv</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Amelia Jones</td>
+                        <td>12-09-2024</td>
+                        <td>How do I apply for a Smart Grant?</td>
+                        <td>how_to_apply_for_smart_grant.csv</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>William Brown</td>
+                        <td>23-09-2024</td>
+                        <td>What documents are required for the application?</td>
+                        <td>documents_are_required_for_application.csv</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Isla Johnson</td>
+                        <td>28-09-2024</td>
+                        <td>What is the typical funding amount for a Smart Grant?</td>
+                        <td>typical_funding_amount.csv</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>James Taylor</td>
+                        <td>06-10-2024</td>
+                        <td>Are there restrictions on how the grant funds can be used?</td>
+                        <td>restrictions.csv</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Sophia Williams</td>
+                        <td>14-10-2024</td>
+                        <td>What are the reporting requirements after receiving a Smart Grant?</td>
+                        <td>reporting_requirements.csv</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
     </div>
@@ -107,7 +146,7 @@
             </div>
         </footer>
     </div>
-    
+
 </div>
 
 <script src="assets/js/script.js"></script>
