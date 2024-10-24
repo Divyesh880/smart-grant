@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
 
     <div id="sidebar" class="sidenav_bar">
@@ -27,7 +29,8 @@
             <span class="sidemenu_text">Dashboard</span>
         </a> -->
         <a href="single-question.html" class="sidebar_link">
-            <img src="assets/images/sidebar/single_question_orange.png" alt="Single Question" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/single_question_orange.png" alt="Single Question" width="28"
+                class="sidebar_icons">
             <span class="sidemenu_text">Single Question Grant Authoring</span>
         </a>
         <!-- <a href="got-questions.html" class="sidebar_link">
@@ -35,234 +38,264 @@
             <span class="sidemenu_text">Got Questions? Let’s Ignite!</span>
         </a> -->
         <a href="multi-question.html" class="sidebar_link">
-            <img src="assets/images/sidebar/multi_question_orange.png" alt="Multi-Question" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/multi_question_orange.png" alt="Multi-Question" width="28"
+                class="sidebar_icons">
             <span class="sidemenu_text">Multi-Question Grant Authoring</span>
         </a>
         <a href="grant-response-history.html" class="sidebar_link">
-            <img src="assets/images/sidebar/grant_response_history_orange.png" alt="Grant Response History" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/grant_response_history_orange.png" alt="Grant Response History" width="28"
+                class="sidebar_icons">
             <span class="sidemenu_text">Grant Response History</span>
         </a>
         <a href="future-vision.html" class="sidebar_link">
-            <img src="assets/images/sidebar/future_vision_orange.png" alt="Future Vision" width="28" class="sidebar_icons">
+            <img src="assets/images/sidebar/future_vision_orange.png" alt="Future Vision" width="28"
+                class="sidebar_icons">
             <span class="sidemenu_text">Future Vision</span>
         </a>
     </div>
 
-<div id="main_container">
+    <div id="main_container">
 
-    <div class="top_header">
-        <div>
-            <span onclick="toggleNav()">
-                <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
-            </span>
-        </div>
-        <div class="dropdown_box">
-            <span>John Thompson</span>
-            <img src="assets/images/header/profile_orange.png" alt="Profile" class="dropdown_image"
-                onclick="toggleDropdown()">
-            <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
-            <div class="dropdown_content" id="profile_dropdown">
-                <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
-                <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
-                <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+        <div class="top_header">
+            <div>
+                <span onclick="toggleNav()">
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
+                </span>
             </div>
-        </div>
-    </div>
-    
-    <div class="content_body">
-
-        <div class="mt-4">
-            <div class="d-flex align-items-center">
-                <h1 class="site_title pe-2">Multi-Question Grant Authoring</h1>
-                <img src="assets/images/sidebar/multi_question_orange.png" alt="Multi-Question Grant Authoring" title="Multi-Question Grant Authoring" class="title_icon print_none">
-            </div>
-            <h5 class="mt-2 print_none">Upload a CSV or Excel file with questions, or paste your comma-separated questions below. The tool will generate responses for each.</h5>
-        </div>
-
-        <hr>
-
-        <div class="mb-4 print_none">
-            <h5 class="mt-4">Or paste your comma-separated questions here</h5>
-            <textarea rows="3" placeholder="Type Your Questions" class="site_textarea"></textarea>
-        </div>
-
-        <div class="mb-4 print_none">
-            <h5 class="mt-4">Upload your CSV or Excel file</h5>
-            <div id="drop-area">
-                <img id="download-icon" src="assets/images/icons/upload.png" alt="Upload Icon">
-                <h2>Drag and Drop File Here</h2>
-                <input type="file" id="fileElem" multiple accept=".csv, .xls, .xlsx" style="display:none;">
-                <label for="fileElem" id="fileLabel" class="select_file_text">or <span>browse file</span> from your device</label><br>
-                <span class="text-secondary limit_text">Limit 200MB per file - CSV, XLSX</span>
-            </div>
-            <div id="file-list"></div>
-        </div>
-
-        <div class="print_none">
-            <button type="submit" class="btn site_btn textbox_btn">Submit</button>
-        </div>
-
-        <div>
-            <div class="table_functions_btn print_none">
-                <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
-                <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table" title="Print or Download Table">
-            </div>
-
-            <div class="table-responsive" id="tableContainer">
-                <table class="table table-bordered table_font">
-                    <thead>
-                        <tr class="purple_bg_color">
-                            <td class="text-nowrap">Response Time</td>
-                            <td class="text-nowrap">Document Source</td>
-                            <td class="text-nowrap">Questions</td>
-                            <td class="text-nowrap">Answers</td>
-                            <td class="text-nowrap">CSV or DOC</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="table-light">
-                            <td>10ms</td>
-                            <td>Smart Tool</td>
-                            <td>What is the typical funding amount for a Smart Grant?</td>
-                            <td>Funding amounts can vary widely depending on the program and project scope, usually ranging from a few thousand to several hundred thousand dollars.</td>
-                            <td>
-                                <div class="table_icon">
-                                    <img src="assets/images/icons/csv.png" alt="Download CSV File" title="Download CSV File">
-                                    <img src="assets/images/icons/doc.png" alt="Download DOC File" title="Download DOC File">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="table-light">
-                            <td>10ms</td>
-                            <td>Google</td>
-                            <td>Are there restrictions on how the grant funds can be used?</td>
-                            <td>Yes, funds are typically designated for specific project expenses, such as personnel, materials, and overhead. Always refer to the specific grant guidelines for details.</td>
-                            <td>
-                                <div class="table_icon">
-                                    <img src="assets/images/icons/csv.png" alt="Download CSV File" title="Download CSV File">
-                                    <img src="assets/images/icons/doc.png" alt="Download DOC File" title="Download DOC File">
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="table-light">
-                            <td>10ms</td>
-                            <td>Government</td>
-                            <td>What are the reporting requirements after receiving a Smart Grant?</td>
-                            <td>Grantees are usually required to submit periodic progress reports and a final report detailing project outcomes, expenditures, and impacts.</td>
-                            <td>
-                                <div class="table_icon">
-                                    <img src="assets/images/icons/csv.png" alt="Download CSV File" title="Download CSV File">
-                                    <img src="assets/images/icons/doc.png" alt="Download DOC File" title="Download DOC File">
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="print_none">
-
-            <div class="mb-4">
-                <h2 class="orange_color">Frequently Asked Questions?</h2>
-            </div>
-
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            <strong class="question_font_size">What is the typical funding amount for a Smart Grant?</strong>
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Funding amounts can vary widely depending on the program and project scope, usually ranging from a few thousand to several hundred thousand dollars.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            <strong class="question_font_size">Are there restrictions on how the grant funds can be used?</strong>
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Yes, funds are typically designated for specific project expenses, such as personnel, materials, and overhead. Always refer to the specific grant guidelines for details.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            <strong class="question_font_size">What are the reporting requirements after receiving a Smart Grant?</strong>
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            <p>Grantees are usually required to submit periodic progress reports and a final report detailing project outcomes, expenditures, and impacts.</p>
-                        </div>
-                    </div>
+            <div class="dropdown_box">
+                <span>John Thompson</span>
+                <img src="assets/images/header/profile_orange.png" alt="Profile" class="dropdown_image"
+                    onclick="toggleDropdown()">
+                <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
+                <div class="dropdown_content" id="profile_dropdown">
+                    <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                    <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                    <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
                 </div>
             </div>
+        </div>
 
+        <div class="content_body">
+            <div class="container-fluid">
+
+                <div class="mt-4">
+                    <div class="d-flex align-items-center">
+                        <h1 class="site_title pe-2">Multi-Question Grant Authoring</h1>
+                        <img src="assets/images/sidebar/multi_question_orange.png" alt="Multi-Question Grant Authoring"
+                            title="Multi-Question Grant Authoring" class="title_icon print_none">
+                    </div>
+                    <h5 class="mt-2 print_none">Upload a CSV or Excel file with questions, or paste your comma-separated
+                        questions below. The tool will generate responses for each.</h5>
+                </div>
+
+                <hr>
+
+                <div class="mb-4 print_none">
+                    <h5 class="mt-4">Or paste your comma-separated questions here</h5>
+                    <textarea rows="3" placeholder="Type Your Questions" class="site_textarea"></textarea>
+                </div>
+
+                <div class="mb-4 print_none">
+                    <h5 class="mt-4">Upload your CSV or Excel file</h5>
+                    <div id="drop-area">
+                        <img id="download-icon" src="assets/images/icons/upload.png" alt="Upload Icon">
+                        <h2>Drag and Drop File Here</h2>
+                        <input type="file" id="fileElem" multiple accept=".csv, .xls, .xlsx" style="display:none;">
+                        <label for="fileElem" id="fileLabel" class="select_file_text">or <span>browse file</span> from
+                            your device</label><br>
+                        <span class="text-secondary limit_text">Limit 200MB per file - CSV, XLSX</span>
+                    </div>
+                    <div id="file-list"></div>
+                </div>
+
+                <div class="print_none">
+                    <button type="submit" class="btn site_btn textbox_btn">Submit</button>
+                </div>
+
+                <div>
+                    <div class="table_functions_btn print_none">
+                        <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View"
+                            title="Fullsreen View">
+                        <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table"
+                            title="Print or Download Table">
+                    </div>
+
+                    <div class="table-responsive" id="tableContainer">
+                        <table class="table table-bordered table_font">
+                            <thead>
+                                <tr class="purple_bg_color">
+                                    <td class="text-nowrap">Response Time</td>
+                                    <td class="text-nowrap">Document Source</td>
+                                    <td class="text-nowrap">Questions</td>
+                                    <td class="text-nowrap">Answers</td>
+                                    <td class="text-nowrap">CSV or DOC</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-light">
+                                    <td>10ms</td>
+                                    <td>Smart Tool</td>
+                                    <td>What is the typical funding amount for a Smart Grant?</td>
+                                    <td>Funding amounts can vary widely depending on the program and project scope,
+                                        usually ranging from a few thousand to several hundred thousand dollars.</td>
+                                    <td>
+                                        <div class="table_icon">
+                                            <img src="assets/images/icons/csv.png" alt="Download CSV File"
+                                                title="Download CSV File">
+                                            <img src="assets/images/icons/doc.png" alt="Download DOC File"
+                                                title="Download DOC File">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td>10ms</td>
+                                    <td>Google</td>
+                                    <td>Are there restrictions on how the grant funds can be used?</td>
+                                    <td>Yes, funds are typically designated for specific project expenses, such as
+                                        personnel, materials, and overhead. Always refer to the specific grant
+                                        guidelines for details.</td>
+                                    <td>
+                                        <div class="table_icon">
+                                            <img src="assets/images/icons/csv.png" alt="Download CSV File"
+                                                title="Download CSV File">
+                                            <img src="assets/images/icons/doc.png" alt="Download DOC File"
+                                                title="Download DOC File">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td>10ms</td>
+                                    <td>Government</td>
+                                    <td>What are the reporting requirements after receiving a Smart Grant?</td>
+                                    <td>Grantees are usually required to submit periodic progress reports and a final
+                                        report detailing project outcomes, expenditures, and impacts.</td>
+                                    <td>
+                                        <div class="table_icon">
+                                            <img src="assets/images/icons/csv.png" alt="Download CSV File"
+                                                title="Download CSV File">
+                                            <img src="assets/images/icons/doc.png" alt="Download DOC File"
+                                                title="Download DOC File">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="print_none">
+
+                    <div class="mb-4">
+                        <h2 class="orange_color">Frequently Asked Questions?</h2>
+                    </div>
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong class="question_font_size">What is the typical funding amount for a Smart
+                                        Grant?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Funding amounts can vary widely depending on the program and project scope,
+                                        usually ranging from a few thousand to several hundred thousand dollars.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong class="question_font_size">Are there restrictions on how the grant funds can
+                                        be used?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Yes, funds are typically designated for specific project expenses, such as
+                                        personnel, materials, and overhead. Always refer to the specific grant
+                                        guidelines for details.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <strong class="question_font_size">What are the reporting requirements after
+                                        receiving a Smart Grant?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Grantees are usually required to submit periodic progress reports and a final
+                                        report detailing project outcomes, expenditures, and impacts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer_block">
+            <footer>
+                <div class="text-center">
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
+                </div>
+            </footer>
         </div>
 
     </div>
 
-    <div class="footer_block">
-        <footer>
-            <div class="text-center">
-                <span>© 2024 Kairos Spark. All rights reserved.</span>
-            </div>
-        </footer>
-    </div>
+    <script>
+        const dropArea = document.getElementById('drop-area');
+        const fileInput = document.getElementById('fileElem');
+        const fileList = document.getElementById('file-list');
 
-</div>
+        dropArea.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            dropArea.classList.add('hover');
+        });
 
-<script>
-    const dropArea = document.getElementById('drop-area');
-    const fileInput = document.getElementById('fileElem');
-    const fileList = document.getElementById('file-list');
+        dropArea.addEventListener('dragleave', () => {
+            dropArea.classList.remove('hover');
+        });
 
-    dropArea.addEventListener('dragover', (event) => {
-        event.preventDefault();
-        dropArea.classList.add('hover');
-    });
+        dropArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+            dropArea.classList.remove('hover');
+            const files = event.dataTransfer.files;
+            handleFiles(files);
+        });
 
-    dropArea.addEventListener('dragleave', () => {
-        dropArea.classList.remove('hover');
-    });
+        fileInput.addEventListener('change', (event) => {
+            const files = event.target.files;
+            handleFiles(files);
+        });
 
-    dropArea.addEventListener('drop', (event) => {
-        event.preventDefault();
-        dropArea.classList.remove('hover');
-        const files = event.dataTransfer.files;
-        handleFiles(files);
-    });
-
-    fileInput.addEventListener('change', (event) => {
-        const files = event.target.files;
-        handleFiles(files);
-    });
-
-    function handleFiles(files) {
-        fileList.innerHTML = ''; // Clear previous file names
-        for (let i = 0; i < files.length; i++) {
-            const file = files[i];
-            const fileItem = document.createElement('div');
-            fileItem.className = 'file-item';
-            fileItem.textContent = file.name; // Show only the file name
-            fileList.appendChild(fileItem);
+        function handleFiles(files) {
+            fileList.innerHTML = ''; // Clear previous file names
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.textContent = file.name; // Show only the file name
+                fileList.appendChild(fileItem);
+            }
         }
-    }
-</script>
+    </script>
 
-<script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>
