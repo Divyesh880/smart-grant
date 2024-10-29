@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <title>Grant Response History | KairoSparks GrantForge</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5.3.3-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="sidebar" class="sidenav_bar">
+        <a href="index.html">
+            <div class="site_logo">
+                <img src="assets/images/logo/logo_KS.png" alt="logo" title="logo">
+            </div>
+        </a>
+        <!-- <a href="index.html" class="sidebar_link">
+            <img src="assets/images/sidebar/dashboard_orange.png" alt="Dashboard" width="28" class="sidebar_icons"> 
+            <span class="sidemenu_text">Dashboard</span>
+        </a> -->
+        <a href="single-question.html" class="sidebar_link">
+            <img src="assets/images/sidebar/single_question_orange.png" alt="Single Question" width="28" class="sidebar_icons">
+            <span class="sidemenu_text">Single Question Grant Authoring</span>
+        </a>
+        <!-- <a href="got-questions.html" class="sidebar_link">
+            <img src="assets/images/sidebar/got_questions_orange.png" alt="Got Questions" width="28" class="sidebar_icons">
+            <span class="sidemenu_text">Got Questions? Let’s Ignite!</span>
+        </a> -->
+        <a href="multi-question.html" class="sidebar_link">
+            <img src="assets/images/sidebar/multi_question_orange.png" alt="Multi-Question" width="28" class="sidebar_icons">
+            <span class="sidemenu_text">Multi-Question Grant Authoring</span>
+        </a>
+        <a href="grant-response-history.html" class="sidebar_link">
+            <img src="assets/images/sidebar/grant_response_history_orange.png" alt="Grant Response History" width="28" class="sidebar_icons">
+            <span class="sidemenu_text">Grant Response History</span>
+        </a>
+        <a href="future-vision.html" class="sidebar_link">
+            <img src="assets/images/sidebar/future_vision_orange.png" alt="Future Vision" width="28" class="sidebar_icons">
+            <span class="sidemenu_text">Future Vision</span>
+        </a>
+    </div>
+
+    <div id="main_container">
+
+        <div class="top_header">
+            <div>
+                <span onclick="toggleNav()">
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
+                </span>
+            </div>
+            <div class="dropdown_box">
+                <span>John Thompson</span>
+                <img src="assets/images/header/profile_orange.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+                <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
+                <div class="dropdown_content" id="profile_dropdown">
+                    <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                    <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                    <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_body content_body_height">
+            <div class="container-fluid">
+
+                <div class="my-4">
+                    <div class="d-flex align-items-center">
+                        <h1 class="site_title pe-2">Grant Response History</h1>
+                        <img src="assets/images/sidebar/grant_response_history_orange.png" alt="Grant Response History" title="Grant Response History" class="title_icon print_none">
+                    </div>
+                    <h4 class="mt-2">Below is a table showing who downloaded the files and when</h4>
+                </div>
+
+                <hr>
+
+                <div class="table_functions_btn print_none">
+                    <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
+                    <img src="assets/images/icons/print_orange.png" id="printBtn" alt="Print or Download Table" title="Print or Download Table">
+                </div>
+
+                <div class="table-responsive" id="tableContainer">
+                    <table class="table table-bordered table_font">
+                        <thead>
+                            <tr class="purple_bg_color">
+                                <td class="text-nowrap">Username</td>
+                                <td class="text-nowrap">Date</td>
+                                <td class="text-nowrap">Questions</td>
+                                <td class="text-nowrap">Filename</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-light">
+                                <td>Oliver Smith</td>
+                                <td>02-09-2024</td>
+                                <td>Who is eligible to apply for the Smart Grant?</td>
+                                <td>eligible_for_smart_grant.csv</td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>Amelia Jones</td>
+                                <td>12-09-2024</td>
+                                <td>How do I apply for a Smart Grant?</td>
+                                <td>how_to_apply_for_smart_grant.csv</td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>William Brown</td>
+                                <td>23-09-2024</td>
+                                <td>What documents are required for the application?</td>
+                                <td>documents_are_required_for_application.csv</td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>Isla Johnson</td>
+                                <td>28-09-2024</td>
+                                <td>What is the typical funding amount for a Smart Grant?</td>
+                                <td>typical_funding_amount.csv</td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>James Taylor</td>
+                                <td>06-10-2024</td>
+                                <td>Are there restrictions on how the grant funds can be used?</td>
+                                <td>restrictions.csv</td>
+                            </tr>
+                            <tr class="table-light">
+                                <td>Sophia Williams</td>
+                                <td>14-10-2024</td>
+                                <td>What are the reporting requirements after receiving a Smart Grant?</td>
+                                <td>reporting_requirements.csv</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer_block">
+            <footer>
+                <div class="text-center">
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
