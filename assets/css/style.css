@@ -562,8 +562,8 @@ table tr td { border: 1px solid #dee2e6; }
     .sidenav_bar { width: 70px; }
     .site_logo img { width: 220px; }
     .top_header { position: relative; z-index: unset; }
-    .footer_block { position: relative; z-index: unset; margin-top: 15px; }
-    .content_body, .content_body_got_questions { padding: 0; margin-top: 0; }
+    .footer_block { position: relative; z-index: unset; }
+    .content_body, .content_body_got_questions { padding: 0; margin-top: 0; padding-bottom: 20px; }
     .site_textbox { font-size: 20px; }
     .textbox_btn { font-size: 20px; height: 50px; }
     /* .dropdown_image { width: 35px; } */
