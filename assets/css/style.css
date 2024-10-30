@@ -25,7 +25,7 @@ body {
 }
 
 .site_logo img {
-    width: 250px;
+    width: 220px;
     transition: .5s;
 }
 
@@ -54,18 +54,18 @@ body {
 }
 
 .site_title {
-    font-size: 55px;
+    font-size: 40px;
     margin-bottom: 3px;
     color: #8E65C1;
 }
 
 .title_icon {
     color: #8e65c1;
-    font-size: 40px;
+    font-size: 35px;
     margin-left: 5px;
 }
 
-.orange_color { color: #fd7909; font-size: 25px; }
+.orange_color { color: #8E65C1; font-size: 25px; }
 
 .purple_bg_color {
     background-color: #8E65C1;
@@ -270,18 +270,18 @@ body {
     margin-bottom: 15px;
 }
 
-.text_box_wrap .site_textbox::placeholder {
+.text_box_wrap .site_textbox::placeholder, .site_textarea::placeholder, .login_box .site_textbox::placeholder {
     font-family: Roboto_Regular;
     color: #9ca3af;
 }
 
 .site_textarea {
     width: -webkit-fill-available;
-    border: 1px solid #000;
+    border: 1px solid #cfcfcf;
     border-radius: 10px;
     padding: 6px 12px;
     background-color: #fff;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .textbox_btn {
@@ -331,9 +331,9 @@ body {
 .table_font { font-size: 18px; }
 
 .login_box {
-    box-shadow: 0px 0px 15px 5px #dddddd;
+    box-shadow: 0px 1px 6px 0px #b2b2b2;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 35px 50px 50px;
     margin-top: 25px;
 }
@@ -349,7 +349,7 @@ body {
 }
 
 #drop-area {
-    border: 2px dashed #ccc;
+    border: 2px dashed #cfcfcf;
     border-radius: 10px;
     width: auto;
     padding: 10px 0;
@@ -439,9 +439,12 @@ body {
 }
 
 .card-body {
-    background-color: #ffeddf;
-    border-radius: 7px;
-    border: 1px solid #d2d2d2;
+    background-color: #8e65c1;
+    border-radius: 10px;
+}
+
+.card-title {
+    color: #fff;
 }
 
 .card_description {
@@ -478,6 +481,25 @@ body {
     box-shadow: 0px 1px 6px 0px #b2b2b2;
     margin-top: 40px;
 }
+
+.accordion-item:first-of-type>.accordion-header .accordion-button, .accordion-item:first-of-type {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.accordion-item:last-of-type>.accordion-header .accordion-button.collapsed, .accordion-item:last-of-type {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.table_border_style {
+    border-style: hidden;
+}
+
+.table-top-right-border {border-top-right-radius: 10px;}
+.table-top-left-border {border-top-left-radius: 10px;}
+.table-bottom-right-border {border-bottom-right-radius: 10px;}
+.table-bottom-left-border {border-bottom-left-radius: 10px;}
 
 /* Media Print Start */
 @media print {
