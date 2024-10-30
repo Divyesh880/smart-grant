@@ -560,14 +560,14 @@ body {
 
 @media screen and (max-width: 768px) {
     .sidenav_bar { width: 70px; }
-    .site_logo img { width: 70px; }
+    .site_logo img { width: 220px; }
     .top_header { position: relative; z-index: unset; }
     .footer_block { position: relative; z-index: unset; margin-top: 15px; }
     .content_body, .content_body_got_questions { padding: 0; margin-top: 0; }
     .site_textbox { font-size: 20px; }
     .textbox_btn { font-size: 20px; height: 50px; }
     /* .dropdown_image { width: 35px; } */
-    #main_container { margin-left: 70px;}
+    #main_container { margin-left: 70px !important;}
     .profile_dropdown { top: 63px; }
     .top_header .sidebar_toggle_btn {
         position: absolute;
