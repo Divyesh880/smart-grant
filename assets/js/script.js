@@ -1,5 +1,35 @@
-let isNavOpen = window.innerWidth > 768; 
-let dropdownVisible = false; 
+// let isNavOpen = window.innerWidth > 768; 
+// let dropdownVisible = false; 
+
+// function toggleNav() {
+//     if (isNavOpen) {
+//         closeNav();
+//     } else {
+//         openNav();
+//     }
+// }
+
+// function openNav() {
+//     document.getElementById("sidebar").style.width = "350px";
+//     document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "350px"; 
+//     isNavOpen = true;
+//     document.getElementById("sidebar").classList.remove('collapsed');
+//     document.getElementById("sidebar").classList.add('open_collapsed');
+// }
+
+// function closeNav() {
+//     document.getElementById("sidebar").style.width = "70px"; 
+//     document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "70px"; 
+//     isNavOpen = false;
+//     document.getElementById("sidebar").classList.add('collapsed');
+//     document.getElementById("sidebar").classList.remove('open_collapsed');
+// }
+
+let isNavOpen = false; 
+
+// Set the sidebar to be collapsed by default
+document.getElementById("sidebar").classList.add('collapsed');
+document.getElementById("main_container").style.marginLeft = "70px"; 
 
 function toggleNav() {
     if (isNavOpen) {
@@ -11,7 +41,7 @@ function toggleNav() {
 
 function openNav() {
     document.getElementById("sidebar").style.width = "350px";
-    document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "350px"; 
+    document.getElementById("main_container").style.marginLeft = "350px"; 
     isNavOpen = true;
     document.getElementById("sidebar").classList.remove('collapsed');
     document.getElementById("sidebar").classList.add('open_collapsed');
@@ -19,7 +49,7 @@ function openNav() {
 
 function closeNav() {
     document.getElementById("sidebar").style.width = "70px"; 
-    document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "70px"; 
+    document.getElementById("main_container").style.marginLeft = "70px"; 
     isNavOpen = false;
     document.getElementById("sidebar").classList.add('collapsed');
     document.getElementById("sidebar").classList.remove('open_collapsed');
