@@ -1,35 +1,20 @@
-// let isNavOpen = window.innerWidth > 768; 
-// let dropdownVisible = false; 
+// Get the current URL
+const currentPath = window.location.pathname.split('/').pop();
 
-// function toggleNav() {
-//     if (isNavOpen) {
-//         closeNav();
-//     } else {
-//         openNav();
-//     }
-// }
+// Select all sidebar links
+const sidebarLinks = document.querySelectorAll('.sidebar_link');
 
-// function openNav() {
-//     document.getElementById("sidebar").style.width = "350px";
-//     document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "350px"; 
-//     isNavOpen = true;
-//     document.getElementById("sidebar").classList.remove('collapsed');
-//     document.getElementById("sidebar").classList.add('open_collapsed');
-// }
+// Loop through each link to set the active class
+sidebarLinks.forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+        link.classList.add('active');
+    }
+});
+// Active class Script End 
 
-// function closeNav() {
-//     document.getElementById("sidebar").style.width = "70px"; 
-//     document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "70px"; 
-//     isNavOpen = false;
-//     document.getElementById("sidebar").classList.add('collapsed');
-//     document.getElementById("sidebar").classList.remove('open_collapsed');
-// }
-
-let isNavOpen = false; 
-
-// Set the sidebar to be collapsed by default
-document.getElementById("sidebar").classList.add('collapsed');
-document.getElementById("main_container").style.marginLeft = "70px"; 
+let isNavOpen = window.innerWidth > 768; // Initialize based on window width
+let dropdownVisible = false; // Placeholder for dropdown functionality
 
 function toggleNav() {
     if (isNavOpen) {
@@ -41,19 +26,71 @@ function toggleNav() {
 
 function openNav() {
     document.getElementById("sidebar").style.width = "350px";
-    document.getElementById("main_container").style.marginLeft = "350px"; 
+    document.getElementById("main_container").style.marginLeft = window.innerWidth <= 768 ? "70px" : "350px";
     isNavOpen = true;
     document.getElementById("sidebar").classList.remove('collapsed');
     document.getElementById("sidebar").classList.add('open_collapsed');
 }
 
 function closeNav() {
-    document.getElementById("sidebar").style.width = "70px"; 
-    document.getElementById("main_container").style.marginLeft = "70px"; 
+    document.getElementById("sidebar").style.width = "70px";
+    document.getElementById("main_container").style.marginLeft = "70px"; // Adjust for smaller screens
     isNavOpen = false;
     document.getElementById("sidebar").classList.add('collapsed');
     document.getElementById("sidebar").classList.remove('open_collapsed');
 }
+
+// Automatically open the sidebar when the page loads if wider than 768px
+window.onload = function() {
+    if (isNavOpen) {
+        openNav();
+    } else {
+        closeNav(); // Ensure it starts collapsed if narrower than 768px
+    }
+};
+
+// Update the sidebar state on window resize
+window.onresize = function() {
+    if (window.innerWidth > 768 && !isNavOpen) {
+        openNav();
+    } else if (window.innerWidth <= 768 && isNavOpen) {
+        closeNav();
+    }
+};
+
+// Event listener for the toggle button (assuming there's a button with id 'toggleButton')
+document.getElementById('toggleButton').addEventListener('click', toggleNav);
+
+
+// Set the sidebar to be collapsed by default
+// let isNavOpen = false;
+
+// document.getElementById("sidebar").classList.add('collapsed');
+// document.getElementById("main_container").style.marginLeft = "70px";
+
+// function toggleNav() {
+//     if (isNavOpen) {
+//         closeNav();
+//     } else {
+//         openNav();
+//     }
+// }
+
+// function openNav() {
+//     document.getElementById("sidebar").style.width = "350px";
+//     document.getElementById("main_container").style.marginLeft = "350px";
+//     isNavOpen = true;
+//     document.getElementById("sidebar").classList.remove('collapsed');
+//     document.getElementById("sidebar").classList.add('open_collapsed');
+// }
+
+// function closeNav() {
+//     document.getElementById("sidebar").style.width = "70px";
+//     document.getElementById("main_container").style.marginLeft = "70px";
+//     isNavOpen = false;
+//     document.getElementById("sidebar").classList.add('collapsed');
+//     document.getElementById("sidebar").classList.remove('open_collapsed');
+// }
 
 // function iconChange(element) {
 //     if (element.classList.contains("fa-bars")) {
@@ -79,36 +116,6 @@ function togglePasswordVisibility() {
         eyeIcon.classList.add('fa-eye'); // Change icon to open eye
     }
 }
-
-// Get the current URL
-const currentPath = window.location.pathname.split('/').pop();
-
-// Select all sidebar links
-const sidebarLinks = document.querySelectorAll('.sidebar_link');
-
-// Loop through each link to set the active class
-sidebarLinks.forEach(link => {
-    const linkPath = link.getAttribute('href');
-    if (linkPath === currentPath) {
-        link.classList.add('active');
-    }
-});
-
-// Automatically open the sidebar when the page loads if wider than 768px
-window.onload = function() {
-    if (isNavOpen) {
-        openNav();
-    }
-};
-
-// Optional: Update the sidebar state on window resize
-window.onresize = function() {
-    if (window.innerWidth > 768 && !isNavOpen) {
-        openNav();
-    } else if (window.innerWidth <= 768 && isNavOpen) {
-        closeNav();
-    }
-};
 
 function toggleDropdown() {
     document.getElementById("profile_dropdown").classList.toggle("dropdown_show");

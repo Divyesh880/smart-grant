@@ -492,9 +492,9 @@ body {
     border-bottom-left-radius: 10px;
 }
 
-.table_border_style {
-    border-style: hidden;
-}
+.table_separate { border-collapse: separate; }
+
+table tr td { border: 1px solid #dee2e6; }
 
 .table-top-right-border {border-top-right-radius: 10px;}
 .table-top-left-border {border-top-left-radius: 10px;}
@@ -582,6 +582,9 @@ body {
         left: 15px;
     }
     .login_box { padding: 35px 15px 50px; }
+    .main_box {
+        padding: 20px 10px;
+    }
 }
 
 @media screen and (max-width: 500px) {
