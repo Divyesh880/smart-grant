@@ -76,8 +76,7 @@ window.onresize = function() {
 
 document.getElementById('toggleButton').addEventListener('click', toggleNav);
 
-// Sidebar Open and Close for Big and Small Screen Script End
-
+// // Sidebar Open and Close for Big and Small Screen Script End
 // Sidebar Collapsed(Close) by Default for Big and Small Screen Script Start
 
 // let isNavOpen = false;
@@ -118,8 +117,7 @@ document.getElementById('toggleButton').addEventListener('click', toggleNav);
 // };
 
 // document.getElementById('toggleButton').addEventListener('click', toggleNav);
-
-// Sidebar Collapsed(Close) by Default for Big and Small Screen Script End
+// // Sidebar Collapsed(Close) by Default for Big and Small Screen Script End
 
 // Sidebar Toggle Icon Change on Click Script Start
 // function iconChange(element) {
