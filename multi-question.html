@@ -82,14 +82,14 @@
                         questions below. The tool will generate responses for each.</h5>
                 </div>
 
-                <div class="main_box">
-                    <div class="mb-4 print_none">
+                <div class="main_box print_none">
+                    <div class="mb-4">
                         <div>
                             <h2 class="orange_color mb-3">Ask Your Questions</h2>
                         </div>
                         <textarea rows="3" placeholder="Type your questions here..." class="site_textarea"></textarea>
                     </div>
-                    <div class="mb-4 print_none">
+                    <div class="mb-4">
                         <div>
                             <h2 class="orange_color mb-3">Upload your CSV or Excel file</h2>
                         </div>
@@ -102,7 +102,7 @@
                         </div>
                         <div id="file-list"></div>
                     </div>
-                    <div class="print_none">
+                    <div>
                         <button type="button" class="btn site_btn textbox_btn">
                             <!-- <i class="fa-regular fa-paper-plane"></i> -->
                             <i class="fa-solid fa-share"></i>
@@ -251,7 +251,7 @@
             </div>
         </div>
 
-        <div class="footer_block">
+        <div class="footer_block print_none">
             <footer>
                 <div class="text-center">
                     <span>© 2024 Kairos Spark. All rights reserved.</span>
@@ -260,6 +260,40 @@
         </div>
 
     </div>
+
+    <script>
+        // Table Print and View Fullscreen Sript Start
+        const fullscreenBtn = document.getElementById('fullscreenBtn');
+        const printBtn = document.getElementById('printBtn');
+        const tableContainer = document.getElementById('tableContainer');
+
+        fullscreenBtn.addEventListener('click', () => {
+            if (tableContainer.requestFullscreen) {
+                tableContainer.requestFullscreen();
+            } else if (tableContainer.mozRequestFullScreen) { // Firefox
+                tableContainer.mozRequestFullScreen();
+            } else if (tableContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                tableContainer.webkitRequestFullscreen();
+            } else if (tableContainer.msRequestFullscreen) { // IE/Edge
+                tableContainer.msRequestFullscreen();
+            }
+        });
+
+        printBtn.addEventListener('click', () => {
+            window.print(); 
+        });
+
+        document.addEventListener('fullscreenchange', () => {
+            if (document.fullscreenElement) {
+                tableContainer.style.padding = "15px"; 
+                tableContainer.style.backgroundColor = "#ffffff"; 
+            } else {
+                tableContainer.style.padding = "";
+                tableContainer.style.backgroundColor = ""; 
+            }
+        });
+        // Table Print and View Fullscreen Sript End    
+    </script>
 
     <script>
         const dropArea = document.getElementById('drop-area');
