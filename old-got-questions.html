@@ -15,18 +15,21 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
+        /* .site_logo { border-bottom: 1px solid #ababab; } */
+        
         body.theme .content_body { background-color: var(--light-color); }
         body.theme .sidenav_bar { background-color: var(--light-purple); }
-        body.theme .sidebar_link:hover, body.theme .sidebar_link.active { color: #ffffff; background-color: var(--dark-purple); }
+        body.theme .sidebar_link:hover, body.theme .sidebar_link.active { color: var(--light-color); background-color: var(--dark-purple); }
         body.theme .main_box { background-color: var(--light-purple); }
         body.theme .purple_bg_color td { background-color: var(--dark-purple); color: var(--light-purple); }
         body.theme .accordion-button:not(.collapsed) { background-color: var(--dark-purple) !important; }
         body.theme .accordion-button:not(.collapsed) .question_font_size { color: var(--light-color); }
 
         .sidenav_bar.collapsed .switch_box .switch_text { display: none; }
-        .sidenav_bar.collapsed .switch_box { padding: 0; left: 10px; bottom: 20px; }
+        .sidenav_bar.collapsed .switch_box { padding: 20px 0; left: 10px; margin-right: 10px; }
         .switch_box {
             position: absolute;
+            border-top: 1px solid #ababab;
             bottom: 0;
             display: flex;
             flex-direction: row;
@@ -34,7 +37,8 @@
             width: -webkit-fill-available;
             gap: 15px;
             align-items: center;
-            padding: 20px 30px 20px 12px;
+            padding: 20px 12px;
+            margin-right: 16px;
         }
 
         .toggle-switch {
@@ -116,7 +120,7 @@
                 <span class="sidemenu_text">Got Questions</span>
             </a>
             <div class="switch_box">
-                <span class="switch_text">Change Theme Color</span>
+                <span class="switch_text">Change Theme Colors</span>
                 <label class="toggle-switch">
                     <input type="checkbox" id="change-theme" class="input-switch">
                     <span class="switch-slider"></span>
@@ -157,7 +161,7 @@
                 <div class="main_box mb-4">
                     <div class="py-2">
                         <div>
-                            <h2 class="sub_title">Ask Your Questions</h2>
+                            <h2 class="sub_title mb-3">Ask Your Questions</h2>
                         </div>
                         <div class="text_box_wrap">
                             <div id="inputFields" class="w-100">
@@ -238,6 +242,7 @@
     </div>
 
     <script>
+        // Change Theme Color Script Start
         const checkbox = document.getElementById('change-theme');
         checkbox.addEventListener('change', function() {
             if (this.checked) {
@@ -246,6 +251,7 @@
                 document.body.classList.remove('theme'); // Remove theme class
             }
         });
+        // Change Theme Color Script End
     </script>
 
     <!-- Multiple Textbox On Click +(sign) Script Start -->

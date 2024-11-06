@@ -42,6 +42,67 @@
                 <div class="sidebar_icons"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
                 <span class="sidemenu_text">Future Vision</span>
             </a>
+            <div class="print_none">
+                <div class="py-4">
+
+                    <div class="mb-4">
+                        <h2 class="sub_title">Frequently Asked Questions?</h2>
+                    </div>
+
+                    <div class="accordion mb-2" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong class="question_font_size">What is the typical funding amount for a Smart
+                                        Grant?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Funding amounts can vary widely depending on the program and project scope,
+                                        usually ranging from a few thousand to several hundred thousand dollars.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong class="question_font_size">Are there restrictions on how the grant funds can
+                                        be used?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Yes, funds are typically designated for specific project expenses, such as
+                                        personnel, materials, and overhead. Always refer to the specific grant
+                                        guidelines for details.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <strong class="question_font_size">What are the reporting requirements after
+                                        receiving a Smart Grant?</strong>
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <p>Grantees are usually required to submit periodic progress reports and a final
+                                        report detailing project outcomes, expenditures, and impacts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -50,14 +111,13 @@
         <div class="top_header">
             <div>
                 <span onclick="toggleNav()">
-                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa-regular fa-hard-drive"></i>
                 </span>
             </div>
             <div class="dropdown_box">
-                <span>John Thompson</span>
-                <img src="assets/images/header/profile_orange.png" alt="Profile" class="dropdown_image"
-                    onclick="toggleDropdown()">
-                <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
+                <!-- <span>John Thompson</span> -->
+                <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+                <!-- <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div> -->
                 <div class="dropdown_content" id="profile_dropdown">
                     <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
                     <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
@@ -66,12 +126,12 @@
             </div>
         </div>
 
-        <div class="content_body">
+        <div class="content_body p-5">
             <div class="container-fluid">
 
-                <div class="pt-4">
+                <div>
                     <div class="d-flex align-items-center">
-                        <h1 class="site_title pe-2">Multi-Question Grant Authoring</h1>
+                        <h1 class="site_title pe-2 text-left">Multi-Question Grant Authoring</h1>
                         <i class="fa-solid fa-file-circle-question title_icon print_none"></i>
                     </div>
                     <h5 class="mt-2 print_none">Upload a CSV or Excel file with questions, or paste your comma-separated
@@ -99,7 +159,7 @@
                         <div id="file-list"></div>
                     </div>
                     <div>
-                        <button type="button" class="btn site_btn textbox_btn">
+                        <button type="button" class="btn site_btn">
                             <!-- <i class="fa-regular fa-paper-plane"></i> -->
                             <i class="fa-solid fa-share"></i>
                             Submit
@@ -111,7 +171,7 @@
 
                     <div class="table_functions_btn print_none">
                         <div>
-                            <h2 class="sub_title">Recent Response</h2>
+                            <h2 class="sub_title">Response</h2>
                         </div>
                         <div>
                             <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
@@ -182,72 +242,10 @@
                     </div>
                 </div>
 
-                <div class="print_none">
-                    <div class="main_box pb-4">
-
-                        <div class="mb-4">
-                            <h2 class="sub_title">Frequently Asked Questions?</h2>
-                        </div>
-
-                        <div class="accordion mb-2" id="accordionExample">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <strong class="question_font_size">What is the typical funding amount for a Smart
-                                            Grant?</strong>
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse show"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Funding amounts can vary widely depending on the program and project scope,
-                                            usually ranging from a few thousand to several hundred thousand dollars.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <strong class="question_font_size">Are there restrictions on how the grant funds can
-                                            be used?</strong>
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Yes, funds are typically designated for specific project expenses, such as
-                                            personnel, materials, and overhead. Always refer to the specific grant
-                                            guidelines for details.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <strong class="question_font_size">What are the reporting requirements after
-                                            receiving a Smart Grant?</strong>
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                        <p>Grantees are usually required to submit periodic progress reports and a final
-                                            report detailing project outcomes, expenditures, and impacts.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
             </div>
         </div>
 
-        <div class="footer_block print_none">
+        <div class="footer_block print_none position-relative">
             <footer>
                 <div class="text-center">
                     <span>© 2024 Kairos Spark. All rights reserved.</span>
