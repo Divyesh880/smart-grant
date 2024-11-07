@@ -19,7 +19,7 @@
 <body>
 
     <div id="sidebar" class="sidenav_bar">
-        <a href="index.html">
+        <a href="#">
             <div class="site_logo">
                 <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
                 <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo">
@@ -60,15 +60,15 @@
                 <div class="dropdown_content" id="profile_dropdown">
                     <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
                     <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
-                    <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                    <a href="index.html"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
                 </div>
             </div>
         </div>
 
-        <div class="content_body p-5">
+        <div class="content_body content_space">
             <div class="container-fluid">
 
-                <div class="py-4">
+                <div class="pb-4">
                     <div class="d-flex align-items-center">
                         <h1 class="site_title pe-2">Grant Response History</h1>
                         <i class="fa-solid fa-clock title_icon print_none"></i>
@@ -92,7 +92,8 @@
                         <table class="table table_font table_separate">
                             <thead>
                                 <tr class="purple_bg_color">
-                                    <td class="text-nowrap table-top-left-border">Username</td>
+                                    <td class="text-nowrap table-top-left-border text-center">Select</td>
+                                    <td class="text-nowrap">Username</td>
                                     <td class="text-nowrap">Date</td>
                                     <td class="text-nowrap">Questions</td>
                                     <td class="text-nowrap table-top-right-border">Filename</td>
@@ -100,40 +101,46 @@
                             </thead>
                             <tbody>
                                 <tr class="table-light">
-                                    <td>Oliver Smith</td>
-                                    <td>02-09-2024</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">Oliver Smith</td>
+                                    <td class="text-nowrap" valign="middle">02-09-2024</td>
                                     <td>Who is eligible to apply for the Smart Grant?</td>
-                                    <td>eligible_for_smart_grant.csv</td>
+                                    <td valign="middle">eligible_for_smart_grant.csv</td>
                                 </tr>
                                 <tr class="table-light">
-                                    <td>Amelia Jones</td>
-                                    <td>12-09-2024</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">Amelia Jones</td>
+                                    <td class="text-nowrap" valign="middle">12-09-2024</td>
                                     <td>How do I apply for a Smart Grant?</td>
-                                    <td>how_to_apply_for_smart_grant.csv</td>
+                                    <td valign="middle">how_to_apply_for_smart_grant.csv</td>
                                 </tr>
                                 <tr class="table-light">
-                                    <td>William Brown</td>
-                                    <td>23-09-2024</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">William Brown</td>
+                                    <td class="text-nowrap" valign="middle">23-09-2024</td>
                                     <td>What documents are required for the application?</td>
-                                    <td>documents_are_required_for_application.csv</td>
+                                    <td valign="middle">documents_are_required_for_application.csv</td>
                                 </tr>
                                 <tr class="table-light">
-                                    <td>Isla Johnson</td>
-                                    <td>28-09-2024</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">Isla Johnson</td>
+                                    <td class="text-nowrap" valign="middle">28-09-2024</td>
                                     <td>What is the typical funding amount for a Smart Grant?</td>
-                                    <td>typical_funding_amount.csv</td>
+                                    <td valign="middle">typical_funding_amount.csv</td>
                                 </tr>
                                 <tr class="table-light">
-                                    <td>James Taylor</td>
-                                    <td>06-10-2024</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">James Taylor</td>
+                                    <td class="text-nowrap" valign="middle">06-10-2024</td>
                                     <td>Are there restrictions on how the grant funds can be used?</td>
-                                    <td>restrictions.csv</td>
+                                    <td valign="middle">restrictions.csv</td>
                                 </tr>
                                 <tr class="table-light">
-                                    <td class="table-bottom-left-border">Sophia Williams</td>
-                                    <td>14-10-2024</td>
+                                    <td class="table-bottom-left-border text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">Sophia Williams</td>
+                                    <td class="text-nowrap" valign="middle">14-10-2024</td>
                                     <td>What are the reporting requirements after receiving a Smart Grant?</td>
-                                    <td class="table-bottom-right-border">reporting_requirements.csv</td>
+                                    <td class="table-bottom-right-border" valign="middle">reporting_requirements.csv</td>
                                 </tr>
                             </tbody>
                         </table>

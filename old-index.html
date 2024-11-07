@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <title>KairoSparks GrantForge | Dashboard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5.3.3-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="sidebar" class="sidenav_bar">
+        <a href="index.html">
+            <div class="site_logo">
+                <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
+                <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo">
+            </div>
+        </a>
+        <div class="sidebar_menu_box">
+            <a href="single-question.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-circle-question"></i></div>
+                <span class="sidemenu_text">Single Question Grant Authoring</span>
+            </a>
+            <a href="multi-question.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-file-circle-question"></i></div>
+                <span class="sidemenu_text">Multi-Question Grant Authoring</span>
+            </a>
+            <a href="grant-response-history.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clock"></i></div>
+                <span class="sidemenu_text">Grant Response History</span>
+            </a>
+            <a href="future-vision.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <span class="sidemenu_text">Future Vision</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="main_container">
+
+        <div class="top_header">
+            <div>
+                <span onclick="toggleNav()">
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa-regular fa-hard-drive"></i>
+                </span>
+            </div>
+            <div class="dropdown_box">
+                <!-- <span>John Thompson</span> -->
+                <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+                <!-- <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div> -->
+                <div class="dropdown_content" id="profile_dropdown">
+                    <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                    <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                    <a href="index.html"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_body content_body_height">
+            <div class="container-fluid">
+
+                <div class="pt-4">
+                    <div class="d-flex align-items-center">
+                        <h1 class="site_title pe-2">KairoSparks GrantForge</h1>
+                        <img src="assets/images/logo/KSG-logo.png" alt="logo" title="logo" width="55">
+                    </div>
+                    <h3 class="mt-2">Powered by : OpenAI-Retriver</h3>
+                </div>
+
+                <hr>
+
+                <div class="mt-5">
+                    <div class="card_box">
+                        <div class="dashboard_cards card_color1">
+                            <!-- <i class="fa-solid fa-database"></i> -->
+                            <img src="assets/images/dashboard/total_data_dashboard.png" alt="Total Data"
+                                title="Total Data" class="card_icon">
+                            <h3>10,000 +</h3>
+                            <p>Total Data</p>
+                        </div>
+                        <div class="dashboard_cards card_color2">
+                            <!-- <i class="fa-solid fa-users-line"></i> -->
+                            <img src="assets/images/dashboard/profile_dashboard.png" alt="Profiles" title="Profiles"
+                                class="card_icon">
+                            <h3>4500 +</h3>
+                            <p>Profiles</p>
+                        </div>
+                        <div class="dashboard_cards card_color3">
+                            <!-- <i class="fa-solid fa-hand-holding-dollar"></i> -->
+                            <img src="assets/images/dashboard/revenue_dashboard.png" alt="Revenue" title="Revenue"
+                                class="card_icon">
+                            <h3>7,00,000 +</h3>
+                            <p>Revenue</p>
+                        </div>
+                        <div class="dashboard_cards card_color4">
+                            <!-- <i class="fa-solid fa-people-group"></i> -->
+                            <img src="assets/images/dashboard/visitors_dashboard.png" alt="Visitors" title="Visitors"
+                                class="card_icon">
+                            <h3>5,000 +</h3>
+                            <p>Visitors</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer_block print_none">
+            <footer>
+                <div class="text-center">
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

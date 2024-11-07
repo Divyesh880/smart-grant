@@ -19,7 +19,7 @@
 <body>
 
     <div id="sidebar" class="sidenav_bar">
-        <a href="index.html">
+        <a href="#">
             <div class="site_logo">
                 <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
                 <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo">
@@ -121,15 +121,15 @@
                 <div class="dropdown_content" id="profile_dropdown">
                     <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
                     <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
-                    <a href="#"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                    <a href="index.html"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
                 </div>
             </div>
         </div>
 
-        <div class="content_body p-5">
+        <div class="content_body content_space">
             <div class="container-fluid">
 
-                <div>
+                <div >
                     <div class="d-flex align-items-center">
                         <h1 class="site_title pe-2 text-left">Multi-Question Grant Authoring</h1>
                         <i class="fa-solid fa-file-circle-question title_icon print_none"></i>
@@ -183,59 +183,63 @@
                         <table class="table table_font table_separate">
                             <thead>
                                 <tr class="purple_bg_color">
-                                    <td class="text-nowrap table-top-left-border">Response Time</td>
-                                    <td class="text-nowrap">Document Source</td>
+                                    <td class="text-nowrap table-top-left-border text-center">Select</td>
+                                    <td class="text-nowrap">Username</td>
+                                    <td class="text-nowrap">Date</td>
                                     <td class="text-nowrap">Questions</td>
-                                    <td class="text-nowrap">Answers</td>
-                                    <td class="text-nowrap table-top-right-border">CSV or DOC</td>
+                                    <td class="text-nowrap table-top-right-border">Answers</td>
+                                    <!-- <td class="text-nowrap table-top-right-border">CSV or DOC</td> -->
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="table-light">
-                                    <td>10ms</td>
-                                    <td>Smart Tool</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                     <td class="text-nowrap" valign="middle">Oliver Smith</td>
+                                    <td class="text-nowrap" valign="middle">02-09-2024</td>
                                     <td>What is the typical funding amount for a Smart Grant?</td>
                                     <td>Funding amounts can vary widely depending on the program and project scope,
                                         usually ranging from a few thousand to several hundred thousand dollars.</td>
-                                    <td>
+                                    <!-- <td>
                                         <div class="table_icon">
                                             <img src="assets/images/icons/csv.png" alt="Download CSV File"
                                                 title="Download CSV File">
                                             <img src="assets/images/icons/doc.png" alt="Download DOC File"
                                                 title="Download DOC File">
                                         </div>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 <tr class="table-light">
-                                    <td>10ms</td>
-                                    <td>Google</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                     <td class="text-nowrap" valign="middle">Oliver Smith</td>
+                                    <td class="text-nowrap" valign="middle">02-09-2024</td>
                                     <td>Are there restrictions on how the grant funds can be used?</td>
                                     <td>Yes, funds are typically designated for specific project expenses, such as
                                         personnel, materials, and overhead. Always refer to the specific grant
                                         guidelines for details.</td>
-                                    <td>
+                                    <!-- <td>
                                         <div class="table_icon">
                                             <img src="assets/images/icons/csv.png" alt="Download CSV File"
                                                 title="Download CSV File">
                                             <img src="assets/images/icons/doc.png" alt="Download DOC File"
                                                 title="Download DOC File">
                                         </div>
-                                    </td>
+                                    </td> -->
                                 </tr>
                                 <tr class="table-light">
-                                    <td class="table-bottom-left-border">10ms</td>
-                                    <td>Government</td>
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                     <td class="text-nowrap" valign="middle">Oliver Smith</td>
+                                    <td class="text-nowrap" valign="middle">02-09-2024</td>
                                     <td>What are the reporting requirements after receiving a Smart Grant?</td>
-                                    <td>Grantees are usually required to submit periodic progress reports and a final
+                                    <td class="table-bottom-right-border">Grantees are usually required to submit periodic progress reports and a final
                                         report detailing project outcomes, expenditures, and impacts.</td>
-                                    <td class="table-bottom-right-border">
+                                    <!-- <td class="table-bottom-right-border">
                                         <div class="table_icon">
                                             <img src="assets/images/icons/csv.png" alt="Download CSV File"
                                                 title="Download CSV File">
                                             <img src="assets/images/icons/doc.png" alt="Download DOC File"
                                                 title="Download DOC File">
                                         </div>
-                                    </td>
+                                    </td> -->
                                 </tr>
                             </tbody>
                         </table>
