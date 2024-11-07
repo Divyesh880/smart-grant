@@ -93,8 +93,9 @@
     <div id="sidebar" class="sidenav_bar">
         <a href="#">
             <div class="site_logo">
-                <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
-                <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo">
+                <!-- <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
+                <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo"> -->
+                <img src="assets/images/logo/KSG-logo-03.png" alt="logo" title="logo">
             </div>
         </a>
         <div class="sidebar_menu_box">
@@ -134,13 +135,13 @@
         <div class="top_header">
             <div>
                 <span onclick="toggleNav()">
-                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa fa-bars"></i>
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa-regular fa-hard-drive"></i>
                 </span>
             </div>
             <div class="dropdown_box">
-                <span>John Thompson</span>
-                <img src="assets/images/header/profile_orange.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
-                <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div>
+                <!-- <span>John Thompson</span> -->
+                <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+                <!-- <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div> -->
                 <div class="dropdown_content" id="profile_dropdown">
                     <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
                     <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
@@ -149,10 +150,10 @@
             </div>
         </div>
 
-        <div class="content_body">
+        <div class="content_body content_space">
             <div class="container-fluid">
 
-                <div class="pt-4">
+                <div>
                     <div class="d-flex align-items-center">
                         <h1 class="site_title pe-2">Got Questions? Let’s Ignite!</h1>
                     </div>
@@ -163,14 +164,14 @@
                         <div>
                             <h2 class="sub_title mb-3">Ask Your Questions</h2>
                         </div>
-                        <div class="text_box_wrap">
+                        <div class="text_box_wrap align-items-start">
                             <div id="inputFields" class="w-100">
                                 <div><input type="text" placeholder="Type Your Question" class="site_textbox"></div>
-                                <div><input type="text" placeholder="Type Your Question" class="site_textbox"></div>
+                                <div><input type="text" placeholder="Type Your Question" class="site_textbox mt-3"></div>
                             </div>
-                            <button type="button" onclick="addTextbox()" class="btn add_btn textbox_btn">+</button>
+                            <button type="button" onclick="addTextbox()" class="btn add_btn">+</button>
                         </div>
-                        <button type="button" class="btn site_btn textbox_btn">Submit</button>
+                        <button type="button" class="btn site_btn mt-3">Submit</button>
                     </div>
                 </div>
 
@@ -262,7 +263,7 @@
             const iFeild = document.createElement("input");
             iFeild.setAttribute("type", "text");
             iFeild.setAttribute("placeholder", "Type Your Question");
-            iFeild.classList.add("site_textbox");
+            iFeild.classList.add("site_textbox", "mt-3");
             wrapper.appendChild(iFeild);
             divEle.appendChild(wrapper);
         }
