@@ -155,40 +155,6 @@
 
     </div>
 
-    <script>
-        // Table Print and View Fullscreen Sript Start
-        const fullscreenBtn = document.getElementById('fullscreenBtn');
-        const printBtn = document.getElementById('printBtn');
-        const tableContainer = document.getElementById('tableContainer');
-
-        fullscreenBtn.addEventListener('click', () => {
-            if (tableContainer.requestFullscreen) {
-                tableContainer.requestFullscreen();
-            } else if (tableContainer.mozRequestFullScreen) { // Firefox
-                tableContainer.mozRequestFullScreen();
-            } else if (tableContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
-                tableContainer.webkitRequestFullscreen();
-            } else if (tableContainer.msRequestFullscreen) { // IE/Edge
-                tableContainer.msRequestFullscreen();
-            }
-        });
-
-        printBtn.addEventListener('click', () => {
-            window.print(); 
-        });
-
-        document.addEventListener('fullscreenchange', () => {
-            if (document.fullscreenElement) {
-                tableContainer.style.padding = "15px"; 
-                tableContainer.style.backgroundColor = "#ffffff"; 
-            } else {
-                tableContainer.style.padding = "";
-                tableContainer.style.backgroundColor = ""; 
-            }
-        });
-        // Table Print and View Fullscreen Sript End    
-    </script>
-
     <script src="assets/js/script.js"></script>
 
 </body>
