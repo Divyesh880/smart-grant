@@ -645,7 +645,7 @@ table tr td { border: 1px solid #dee2e6; }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background-color: #fff;
     color: #FD7909;
-    border-bottom: 2px solid #8e65c1;
+    border-bottom: 3px solid #8e65c1;
     border-radius: 0;
 }
 
