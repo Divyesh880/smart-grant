@@ -707,6 +707,8 @@ table tr td { border: 1px solid #dee2e6; }
     .sidenav_bar.collapsed + #main_container .top_header .sidebar_toggle_btn { left: 3px; }
     .login_box { padding: 35px 15px 50px; }
     .main_box { padding: 20px 10px; }
+    .tab_content_border { padding: 10px 5px; }
+    .nav-pills { display: flex; flex-direction: column; align-items: center; }
 }
 
 @media screen and (max-width: 500px) {
