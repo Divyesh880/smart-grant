@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
-    <title>Single Question Grant Authoring | KairoSparks GrantForge</title>
+    <title>View Dashboard | KairoSparks GrantForge</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -86,62 +86,60 @@
             </div>
         </div>
 
-        <div class="content_body">
+        <div class="content_body content_space">
             <div class="container-fluid">
 
-                <div class="center_box">
-                    <div class="content_width">
-
-                        <div>
-                            <div class="d-flex align-items-center">
-                                <h1 class="page_title pe-2">Share Your Question for Grant?</h1>
-                                <!-- <i class="fa-solid fa-circle-question title_icon print_none"></i> -->
-                            </div>
-                        </div>
-
-                        <div class="print_none">
-                            <div>
-
-                                <div class="pt-3 pb-2">
-                                    <div class="text_box_wrap">
-                                        <input type="text" placeholder="Type your question here..." class="text_box" id="suggestion_text">
-                                        <button type="button" class="btn textbox_btn">
-                                            <i class="fa-solid fa-share"></i>
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div class="pt-4">
-                                        <div class="suggestion_box_row">
-                                            <span class="suggestion_box" onclick="addToTextbox(this)">
-                                                <span class="text-primary"><i class="fa-regular fa-file-lines"></i></span>
-                                                <span class="suggestion_box_text">Get Advice</span>
-                                            </span>
-                                            <span class="suggestion_box" onclick="addToTextbox(this)">
-                                                <span class="text-success"><i class="fa-solid fa-chart-simple"></i></span>
-                                                <span class="suggestion_box_text">Simplify</span>
-                                            </span>
-                                            <span class="suggestion_box" onclick="addToTextbox(this)">
-                                                <span class="text-danger"><i class="fa-regular fa-clipboard"></i></span>
-                                                <span class="suggestion_box_text">Impact Statement Optimizer</span>
-                                            </span>
-                                            <span class="suggestion_box" onclick="addToTextbox(this)">
-                                                <span class="text-info"><i class="fa-solid fa-file-invoice"></i></span>
-                                                <span class="suggestion_box_text">Proposal Outline Generator</span>
-                                            </span>
-                                            <span class="suggestion_box" onclick="addToTextbox(this)">
-                                                <span class="text-primary-emphasis"><i class="fa-regular fa-square-plus"></i></span>
-                                                <span class="suggestion_box_text">More</span>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
+                <div class="pb-4">
+                    <div class="d-flex align-items-center">
+                        <h1 class="site_title pe-2">Metrics Dashboard</h1>
+                        <i class="fa-solid fa-gauge-high title_icon"></i>
                     </div>
+                </div>
+
+                <div class="main_box mt-1">
+                    <div>
+                        <h2 class="sub_title">Date Range Selection</h2>
+                    </div>
+                    <form>
+                        <fieldset disabled>
+                            <div class="side_box mt-2 mb-3">
+                                <div>
+                                    <label for="startdate" class="fs-6 text-body-secondary">Start Date</label>
+                                    <input type="text" id="startdate" class="site_textbox" value="2024/10/31">
+                                </div>
+                                <div>
+                                    <label for="enddate" class="fs-6 text-body-secondary">End Date</label>
+                                    <input type="text" id="enddate" class="site_textbox" value="2024/11/07">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="main_box">
+                    <div>
+                        <h2 class="sub_title">Oct 31, 2024 - Nov 07, 2024</h2>
+                    </div>
+                    <div class="side_box mt-3 mb-2">
+                        <div class="borderd_box">
+                            <p>Number of P1 Errors: 8 </p>
+                            <p>Number of P2 Errors: 8 </p>
+                            <p class="m-0">Number of P3 Errors: 0 </p>
+                        </div>
+                        <div class="borderd_box">
+                            <p>OPEN AI Cost: $0.216280</p>
+                            <p>Anthropic Cost: $0.025641</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="main_box">
+                    <div>
+                        <h2 class="sub_title">Total Errors in the Last 24 Hours</h2>
+                    </div>
+                    <div class="mt-3 mb-2">
+                        <span>Total Errors: 0</span>
+                    </div> 
                 </div>
 
             </div>
@@ -150,20 +148,12 @@
         <div class="footer_block print_none">
             <footer>
                 <div class="text-center">
-                    <span class="footer_text">© 2024 Kairos Spark. All rights reserved.</span>
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
                 </div>
             </footer>
         </div>
 
     </div>
-
-    <script>
-        // Type related text in textbox when I click on any suggestions
-        function addToTextbox(element) {
-            const suggestionText = document.getElementById("suggestion_text");
-            suggestionText.value = element.innerText;
-        }
-    </script>
 
     <script>
         // Table Print and View Fullscreen Sript Start
@@ -178,7 +168,7 @@
                 tableContainer.mozRequestFullScreen();
             } else if (tableContainer.webkitRequestFullscreen) { // Chrome, Safari, and Opera
                 tableContainer.webkitRequestFullscreen();
-            } else if (tableContainer.msRequestFullscreen) { // IE Edge
+            } else if (tableContainer.msRequestFullscreen) { // IE/Edge
                 tableContainer.msRequestFullscreen();
             }
         });

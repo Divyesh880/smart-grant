@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <title>View Dashboard | KairoSparks GrantForge</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5.3.3-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="sidebar" class="sidenav_bar">
+        <a href="#">
+            <div class="site_logo">
+                <!-- <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
+                <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo"> -->
+                <img src="assets/images/logo/KS-logo.png" alt="logo" title="logo">
+            </div>
+        </a>
+        <div class="sidebar_menu_box">
+            <a href="single-question.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-circle-question"></i></div>
+                <span class="sidemenu_text">Single Question Grant Authoring</span>
+            </a>
+            <a href="multi-question.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-file-circle-question"></i></div>
+                <span class="sidemenu_text">Multi-Question Grant Authoring</span>
+            </a>
+            <a href="grant-response-history.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clock"></i></div>
+                <span class="sidemenu_text">Grant Response History</span>
+            </a>
+            <a href="request-history.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <span class="sidemenu_text">Request History</span>
+            </a>
+            <a href="view-error-logs.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-bug"></i></div>
+                <span class="sidemenu_text">View Error Logs</span>
+            </a>
+            <a href="view-dashboard.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-gauge-high"></i></div>
+                <span class="sidemenu_text">View Dashboard</span>
+            </a>
+            <a href="manage-database.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-database"></i></div>
+                <span class="sidemenu_text">Manage Database</span>
+            </a>
+            <a href="future-vision.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <span class="sidemenu_text">Future Vision</span>
+            </a>
+            <a href="faq.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clipboard-question"></i></div>
+                <span class="sidemenu_text">Frequently Asked Questions</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="main_container">
+
+        <div class="top_header">
+            <div>
+                <span onclick="toggleNav()">
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa-regular fa-hard-drive"></i>
+                </span>
+            </div>
+            <div class="dropdown_box">
+                <!-- <span>John Thompson</span> -->
+                <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+                <!-- <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div> -->
+                <div class="dropdown_content" id="profile_dropdown">
+                    <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                    <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                    <a href="index.html"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_body content_space">
+            <div class="container-fluid">
+
+                <div class="pb-4">
+                    <div class="d-flex align-items-center">
+                        <h1 class="site_title pe-2">Database Management Interface</h1>
+                        <i class="fa-solid fa-database title_icon"></i>
+                    </div>
+                </div>
+
+                <div class="main_box mt-1">
+                    
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-1-tab" data-bs-toggle="pill" data-bs-target="#pills-1" type="button" role="tab" aria-controls="pills-1" aria-selected="true">Create Database</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-2-tab" data-bs-toggle="pill" data-bs-target="#pills-2" type="button" role="tab" aria-controls="pills-2" aria-selected="false">Refresh Database</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="button" role="tab" aria-controls="pills-3" aria-selected="false">Add Folder/File</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="button" role="tab" aria-controls="pills-4" aria-selected="false">Delete File</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-1-tab" tabindex="0">
+
+                            <div class="mt-4">
+                                <h2 class="sub_title">Create a New Database</h2>
+                                <p>Configure split and overlap parameters and enter the Gdrive Folder ID.</p>
+                            </div>
+
+                            <div class="tab_content_border">
+                                <div>
+                                    <label class="fs-6 text-body-secondary">Character Split</label>
+                                    <div class="input-container">
+                                        <button class="plus_minus_button" id="minus1">-</button>
+                                        <input type="text" class="create_data_textbox" id="create_data_textbox1" value="0">
+                                        <button class="plus_minus_button" id="plus1">+</button>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <label class="fs-6 text-body-secondary">Character Overlap</label>
+                                    <div class="input-container">
+                                        <button class="plus_minus_button" id="minus2">-</button>
+                                        <input type="text" class="create_data_textbox" id="create_data_textbox2" value="0">
+                                        <button class="plus_minus_button" id="plus2">+</button>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <label class="fs-6 text-body-secondary">Gdrive Folder ID</label>
+                                    <input type="text" id="gdrive" class="site_textbox">
+                                </div>
+                                <div class="mt-4">
+                                    <button type="button" class="btn site_btn max_width_btn">Create Database</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab" tabindex="0">
+
+                            <div class="my-4">
+                                <h2 class="sub_title">Refresh Database</h2>
+                            </div>
+
+                            <div class="tab_content_border">
+                                <div>
+                                    <div>
+                                        <label class="fs-6 text-body-secondary">Select Database to Refresh *</label>
+                                    </div>
+                                    <select name="data" id="data" class="site_textbox">
+                                        <option value="db_1111_split_222_overlap">db_1111_split_222_overlap</option>
+                                        <option value="db_1111_split_333_overlap">db_1111_split_333_overlap</option>
+                                        <option value="db_1111_split_444_overlap">db_1111_split_444_overlap</option>
+                                        <option value="db_1111_split_555_overlap">db_1111_split_555_overlap</option>
+                                    </select>
+                                </div>
+                                <div class="mt-3">
+                                    <label class="fs-6 text-body-secondary">Gdrive Folder ID</label>
+                                    <input type="text" id="gdrive" class="site_textbox">
+                                </div>
+                                <div class="mt-4">
+                                    <button type="button" class="btn site_btn max_width_btn">Refresh Database</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">
+
+                            <div class="my-4">
+                                <h2 class="sub_title">Add New File/Folder</h2>
+                            </div>
+
+                            <div class="tab_content_border">
+                                <div>
+                                    <div>
+                                        <label class="fs-6 text-body-secondary">Select Database to Add to *</label>
+                                    </div>
+                                    <select name="data" id="data" class="site_textbox">
+                                        <option value="db_1111_split_222_overlap">db_1111_split_222_overlap</option>
+                                        <option value="db_1111_split_333_overlap">db_1111_split_333_overlap</option>
+                                        <option value="db_1111_split_444_overlap">db_1111_split_444_overlap</option>
+                                        <option value="db_1111_split_555_overlap">db_1111_split_555_overlap</option>
+                                    </select>
+                                </div>
+                                <div class="mt-3">
+                                    <label class="fs-6 text-body-secondary">Gdrive Folder ID</label>
+                                    <input type="text" id="gdrive" class="site_textbox">
+                                </div>
+                                <div class="mt-4">
+                                    <button type="button" class="btn site_btn max_width_btn">Add Folder/File</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">
+
+                            <div class="my-4">
+                                <h2 class="sub_title">Delete File</h2>
+                            </div>
+
+                            <div class="tab_content_border">
+                                <div>
+                                    <div>
+                                        <label class="fs-6 text-body-secondary">Select Database for Deletion *</label>
+                                    </div>
+                                    <select name="data" id="data" class="site_textbox">
+                                        <option value="db_1111_split_222_overlap">db_1111_split_222_overlap</option>
+                                        <option value="db_1111_split_333_overlap">db_1111_split_333_overlap</option>
+                                        <option value="db_1111_split_444_overlap">db_1111_split_444_overlap</option>
+                                        <option value="db_1111_split_555_overlap">db_1111_split_555_overlap</option>
+                                    </select>
+                                </div>
+                                <div class="mt-3">
+                                    <div>
+                                        <label class="fs-6 text-body-secondary">Choose Filename for Deletion</label>
+                                    </div>
+                                    <select name="filedeletion" id="filedeletion" class="site_textbox">
+                                        <option value="Cosmis Foundation LOI1.docx">Cosmis Foundation LOI1.docx</option>
+                                        <option value="Cosmis Foundation LOI2.docx">Cosmis Foundation LOI2.docx</option>
+                                        <option value="Cosmis Foundation LOI3.docx">Cosmis Foundation LOI3.docx</option>
+                                        <option value="Cosmis Foundation LOI4.docx">Cosmis Foundation LOI4.docx</option>
+                                    </select>
+                                </div>
+                                <div class="mt-4">
+                                    <button type="button" class="btn site_btn max_width_btn">Delete File</button>
+                                </div>
+                            </div>
+
+                        </div>
+                      </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer_block print_none">
+            <footer>
+                <div class="text-center">
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script>
+        // Plus and Minus with Textbox
+        // First textbox
+        document.getElementById('minus1').addEventListener('click', function() {
+            let value = parseInt(document.getElementById('create_data_textbox1').value);
+            if (value > 0) {
+                document.getElementById('create_data_textbox1').value = value - 1;
+            }
+        });
+
+        document.getElementById('plus1').addEventListener('click', function() {
+            let value = parseInt(document.getElementById('create_data_textbox1').value);
+            document.getElementById('create_data_textbox1').value = value + 1;
+        });
+
+        // Second textbox
+        document.getElementById('minus2').addEventListener('click', function() {
+            let value = parseInt(document.getElementById('create_data_textbox2').value);
+            if (value > 0) {
+                document.getElementById('create_data_textbox2').value = value - 1;
+            }
+        });
+
+        document.getElementById('plus2').addEventListener('click', function() {
+            let value = parseInt(document.getElementById('create_data_textbox2').value);
+            document.getElementById('create_data_textbox2').value = value + 1;
+        });
+    </script>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

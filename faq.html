@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <title>Frequently Asked Questions | KairoSparks GrantForge</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap 5.3.3-->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="sidebar" class="sidenav_bar">
+        <a href="#">
+            <div class="site_logo">
+                <!-- <img src="assets/images/logo/KSG-logo-03.png" class="full_logo" alt="logo" title="logo">
+                <img src="assets/images/logo/KSG-logo.png" class="sm_logo" alt="logo" title="logo"> -->
+                <img src="assets/images/logo/KS-logo.png" alt="logo" title="logo">
+            </div>
+        </a>
+        <div class="sidebar_menu_box">
+            <a href="single-question.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-circle-question"></i></div>
+                <span class="sidemenu_text">Single Question Grant Authoring</span>
+            </a>
+            <a href="multi-question.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-file-circle-question"></i></div>
+                <span class="sidemenu_text">Multi-Question Grant Authoring</span>
+            </a>
+            <a href="grant-response-history.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clock"></i></div>
+                <span class="sidemenu_text">Grant Response History</span>
+            </a>
+            <a href="request-history.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                <span class="sidemenu_text">Request History</span>
+            </a>
+            <a href="view-error-logs.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-bug"></i></div>
+                <span class="sidemenu_text">View Error Logs</span>
+            </a>
+            <a href="view-dashboard.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-gauge-high"></i></div>
+                <span class="sidemenu_text">View Dashboard</span>
+            </a>
+            <a href="manage-database.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-database"></i></div>
+                <span class="sidemenu_text">Manage Database</span>
+            </a>
+            <a href="future-vision.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                <span class="sidemenu_text">Future Vision</span>
+            </a>
+            <a href="faq.html" class="sidebar_link">
+                <div class="sidebar_icons"><i class="fa-solid fa-clipboard-question"></i></div>
+                <span class="sidemenu_text">Frequently Asked Questions</span>
+            </a>
+        </div>
+    </div>
+
+    <div id="main_container">
+
+        <div class="top_header">
+            <div>
+                <span onclick="toggleNav()">
+                    <i onclick="iconChange(this)" class="sidebar_toggle_btn fa-regular fa-hard-drive"></i>
+                </span>
+            </div>
+            <div class="dropdown_box">
+                <!-- <span>John Thompson</span> -->
+                <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()">
+                <!-- <div class="d-inline-flex"><a href="login.html" class="login_btn">Login</a></div> -->
+                <div class="dropdown_content" id="profile_dropdown">
+                    <a href="#"><i class="fa-solid fa-user"></i> &nbsp; Profile</a>
+                    <a href="#"><i class="fa-solid fa-gear"></i> &nbsp; Settings</a>
+                    <a href="index.html"><i class="fa-solid fa-power-off"></i> &nbsp; Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content_body content_space">
+            <div class="container-fluid">
+
+                <div>
+                    <div class="d-flex align-items-center">
+                        <h1 class="site_title pe-2">Frequently Asked Questions?</h1>
+                        <i class="fa-solid fa-clipboard-question title_icon"></i>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="py-4">
+    
+                        <div class="accordion mb-2" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <strong class="question_font_size">Who is eligible to apply for the Smart Grant?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Eligibility varies by program, but generally includes non-profit organizations,
+                                            educational institutions, and sometimes individuals or small businesses working
+                                            on innovative projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <strong class="question_font_size">How do I apply for a Smart Grant?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Applications can typically be submitted through the designated online portal.
+                                            You'll need to create an account, fill out the application form, and provide
+                                            necessary documentation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <strong class="question_font_size">What documents are required for the application?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Commonly required documents include a project proposal, budget outline, proof of
+                                            eligibility, and any relevant organizational documents.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                        <strong class="question_font_size">What is the typical funding amount for a Smart
+                                            Grant?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Funding amounts can vary widely depending on the program and project scope,
+                                            usually ranging from a few thousand to several hundred thousand dollars.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        <strong class="question_font_size">Are there restrictions on how the grant funds can
+                                            be used?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Yes, funds are typically designated for specific project expenses, such as
+                                            personnel, materials, and overhead. Always refer to the specific grant
+                                            guidelines for details.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                        <strong class="question_font_size">What are the reporting requirements after
+                                            receiving a Smart Grant?</strong>
+                                    </button>
+                                </h2>
+                                <div id="collapseSix" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Grantees are usually required to submit periodic progress reports and a final
+                                            report detailing project outcomes, expenditures, and impacts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer_block print_none">
+            <footer>
+                <div class="text-center">
+                    <span>© 2024 Kairos Spark. All rights reserved.</span>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

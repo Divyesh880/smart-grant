@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
-    <title>Multi-Question Grant Authoring | KairoSparks GrantForge</title>
+    <title>Request History | KairoSparks GrantForge</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
@@ -89,49 +89,18 @@
         <div class="content_body content_space">
             <div class="container-fluid">
 
-                <div>
+                <div class="pb-4">
                     <div class="d-flex align-items-center">
-                        <h1 class="site_title pe-2 text-left">Multi-Question Grant Authoring</h1>
-                        <i class="fa-solid fa-file-circle-question title_icon print_none"></i>
-                    </div>
-                    <h5 class="mt-2 print_none">Upload a CSV or Excel file with questions, or paste your comma-separated
-                        questions below. The tool will generate responses for each.</h5>
-                </div>
-
-                <div class="main_box print_none">
-                    <div class="mb-4">
-                        <div>
-                            <h2 class="sub_title mb-3">Ask Your Questions</h2>
-                        </div>
-                        <textarea rows="3" placeholder="Type your questions here..." class="site_textarea"></textarea>
-                    </div>
-                    <div class="mb-4">
-                        <div>
-                            <h2 class="sub_title mb-3">Upload your CSV or Excel file</h2>
-                        </div>
-                        <div id="drop-area">
-                            <img id="download-icon" src="assets/images/icons/upload.png" alt="Upload Icon">
-                            <h2>Drag and Drop File Here</h2>
-                            <input type="file" id="fileElem" multiple accept=".csv, .xls, .xlsx" style="display:none;">
-                            <label for="fileElem" id="fileLabel" class="select_file_text">or <span>browse file</span> from your device</label><br>
-                            <span class="text-secondary limit_text">Limit 200MB per file - CSV, XLSX</span>
-                        </div>
-                        <div id="file-list"></div>
-                    </div>
-                    <div>
-                        <button type="button" class="btn site_btn">
-                            <!-- <i class="fa-regular fa-paper-plane"></i> -->
-                            <i class="fa-solid fa-share"></i>
-                            Submit
-                        </button>
+                        <h1 class="site_title pe-2">Request History</h1>
+                        <i class="fa-solid fa-clock-rotate-left title_icon print_none"></i>
                     </div>
                 </div>
 
-                <div class="main_box">
+                <div class="main_box mt-1">
 
                     <div class="table_functions_btn print_none">
                         <div>
-                            <h2 class="sub_title">Response</h2>
+                            <button class="reload_btn">Reload Logs <i class="fa-solid fa-arrows-rotate"></i></button>
                         </div>
                         <div>
                             <img src="assets/images/icons/fullscreen_orange.png" id="fullscreenBtn" alt="Fullsreen View" title="Fullsreen View">
@@ -144,72 +113,65 @@
                             <thead>
                                 <tr class="purple_bg_color">
                                     <td class="text-nowrap table-top-left-border text-center">Select</td>
-                                    <td class="text-nowrap">Username</td>
                                     <td class="text-nowrap">Date</td>
                                     <td class="text-nowrap">Questions</td>
-                                    <td class="text-nowrap table-top-right-border">Answers</td>
-                                    <!-- <td class="text-nowrap table-top-right-border">CSV or DOC</td> -->
+                                    <td class="text-nowrap">Response</td>
+                                    <td class="text-nowrap table-top-right-border">Document</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="table-light">
                                     <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
-                                     <td class="text-nowrap" valign="middle">Oliver Smith</td>
                                     <td class="text-nowrap" valign="middle">02-09-2024</td>
+                                    <td>Who is eligible to apply for the Smart Grant?</td>
+                                    <td valign="middle">The Smart Grant is available to eligible individuals or organizations seeking financial support for software development projects.</td>
+                                    <td valign="middle">eligible_for_smart_grant.csv</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">12-09-2024</td>
+                                    <td>How do I apply for a Smart Grant?</td>
+                                    <td valign="middle">To apply for a Smart Grant, complete the online application form on the grant provider's official website.</td>
+                                    <td valign="middle">how_to_apply_for_smart_grant.csv</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">23-09-2024</td>
+                                    <td>What documents are required for the application?</td>
+                                    <td valign="middle">Required documents typically include a project proposal, budget outline, and proof of eligibility or organization details.</td>
+                                    <td valign="middle">documents_are_required_for_application.csv</td>
+                                </tr>
+                                <tr class="table-light">
+                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">28-09-2024</td>
                                     <td>What is the typical funding amount for a Smart Grant?</td>
-                                    <td>Funding amounts can vary widely depending on the program and project scope,
-                                        usually ranging from a few thousand to several hundred thousand dollars.</td>
-                                    <!-- <td>
-                                        <div class="table_icon">
-                                            <img src="assets/images/icons/csv.png" alt="Download CSV File"
-                                                title="Download CSV File">
-                                            <img src="assets/images/icons/doc.png" alt="Download DOC File"
-                                                title="Download DOC File">
-                                        </div>
-                                    </td> -->
+                                    <td valign="middle">The typical funding amount for a Smart Grant depends on the project's scope and needs.</td>
+                                    <td valign="middle">typical_funding_amount.csv</td>
                                 </tr>
                                 <tr class="table-light">
                                     <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
-                                     <td class="text-nowrap" valign="middle">Oliver Smith</td>
-                                    <td class="text-nowrap" valign="middle">02-09-2024</td>
+                                    <td class="text-nowrap" valign="middle">06-10-2024</td>
                                     <td>Are there restrictions on how the grant funds can be used?</td>
-                                    <td>Yes, funds are typically designated for specific project expenses, such as
-                                        personnel, materials, and overhead. Always refer to the specific grant
-                                        guidelines for details.</td>
-                                    <!-- <td>
-                                        <div class="table_icon">
-                                            <img src="assets/images/icons/csv.png" alt="Download CSV File"
-                                                title="Download CSV File">
-                                            <img src="assets/images/icons/doc.png" alt="Download DOC File"
-                                                title="Download DOC File">
-                                        </div>
-                                    </td> -->
+                                    <td valign="middle">Yes, Smart Grant funds are typically restricted to expenses directly related to the approved software project.</td>
+                                    <td valign="middle">restrictions.csv</td>
                                 </tr>
                                 <tr class="table-light">
-                                    <td class="text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
-                                     <td class="text-nowrap" valign="middle">Oliver Smith</td>
-                                    <td class="text-nowrap" valign="middle">02-09-2024</td>
+                                    <td class="table-bottom-left-border text-center" valign="middle"><input type="checkbox" id="responce1" name="responce1" value="responce1"></td>
+                                    <td class="text-nowrap" valign="middle">14-10-2024</td>
                                     <td>What are the reporting requirements after receiving a Smart Grant?</td>
-                                    <td class="table-bottom-right-border">Grantees are usually required to submit periodic progress reports and a final
-                                        report detailing project outcomes, expenditures, and impacts.</td>
-                                    <!-- <td class="table-bottom-right-border">
-                                        <div class="table_icon">
-                                            <img src="assets/images/icons/csv.png" alt="Download CSV File"
-                                                title="Download CSV File">
-                                            <img src="assets/images/icons/doc.png" alt="Download DOC File"
-                                                title="Download DOC File">
-                                        </div>
-                                    </td> -->
+                                    <td valign="middle">Recipients of a Smart Grant are usually required to submit progress reports and a final project report detailing the use of funds and outcomes.</td>
+                                    <td class="table-bottom-right-border" valign="middle">reporting_requirements.csv</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+
                 </div>
 
             </div>
         </div>
 
-        <div class="footer_block print_none position-relative">
+        <div class="footer_block print_none">
             <footer>
                 <div class="text-center">
                     <span>© 2024 Kairos Spark. All rights reserved.</span>
@@ -251,44 +213,6 @@
             }
         });
         // Table Print and View Fullscreen Sript End    
-    </script>
-
-    <script>
-        const dropArea = document.getElementById('drop-area');
-        const fileInput = document.getElementById('fileElem');
-        const fileList = document.getElementById('file-list');
-
-        dropArea.addEventListener('dragover', (event) => {
-            event.preventDefault();
-            dropArea.classList.add('hover');
-        });
-
-        dropArea.addEventListener('dragleave', () => {
-            dropArea.classList.remove('hover');
-        });
-
-        dropArea.addEventListener('drop', (event) => {
-            event.preventDefault();
-            dropArea.classList.remove('hover');
-            const files = event.dataTransfer.files;
-            handleFiles(files);
-        });
-
-        fileInput.addEventListener('change', (event) => {
-            const files = event.target.files;
-            handleFiles(files);
-        });
-
-        function handleFiles(files) {
-            fileList.innerHTML = ''; // Clear previous file names
-            for (let i = 0; i < files.length; i++) {
-                const file = files[i];
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.textContent = file.name; // Show only the file name
-                fileList.appendChild(fileItem);
-            }
-        }
     </script>
 
     <script src="assets/js/script.js"></script>
