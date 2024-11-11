@@ -631,6 +631,10 @@ table tr td { border: 1px solid #dee2e6; }
     width: 100%;
 }
 
+.input_row {
+    display: flex;
+    gap: 20px;
+}
 .input-container {
     display: flex;
     align-items: center;
@@ -675,6 +679,8 @@ table tr td { border: 1px solid #dee2e6; }
 
 .nav-link { color: #000; }
 .nav-link:hover { color: #FD7909; }
+
+table tr td { vertical-align: middle; }
 
 /* Media Print Start */
 @media print {
