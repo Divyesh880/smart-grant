@@ -314,6 +314,9 @@ a {
     font-size: 18px;
     height: 50px;
     transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .textbox_btn {
@@ -710,6 +713,16 @@ table tr td { vertical-align: middle; }
 /* Media Print End */
 
 @media (max-height: 720px) { .login_box { margin-bottom: 40px; } }
+
+@media (min-width:769px) and (max-width:960px) { 
+    .site_btn { font-size: 16px; }
+    .tab_content_border { padding: 10px 10px; }
+    .main_box { padding: 20px 20px; }
+    .nav { flex-direction: column; align-items: center; }
+    .side_box { flex-direction: column; }
+    .input_row { flex-direction: column; }
+}
+
 @media (min-width: 1421px) and (max-width:1600px) { .card_description { height: 165px; } }
 @media (min-width: 1256px) and (max-width:1420px) { .card_description { height: 240px; } }
 @media (max-width:1255px) { .card_description { height: auto; } }
@@ -731,6 +744,8 @@ table tr td { vertical-align: middle; }
     .main_box { padding: 20px 10px; }
     .tab_content_border { padding: 10px 5px; }
     .nav-pills { display: flex; flex-direction: column; align-items: center; }
+    .side_box { flex-direction: column; }
+    .input_row { flex-direction: column; }
 }
 
 @media screen and (max-width: 500px) {
