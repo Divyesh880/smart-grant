@@ -119,7 +119,7 @@
                                                 <span class="suggestion_box_text">Non-profits Description</span>
                                             </span>
                                             <span class="suggestion_box" data-id="2" onclick="handleClick(this)">
-                                                <span class="text-success"><i class="fa-solid fa-chart-simple"></i></span>
+                                                <span class="text-success"><i class="fa-solid fa-users"></i></span>
                                                 <span class="suggestion_box_text">Community Involvement</span>
                                             </span>
                                             <span class="suggestion_box" data-id="3" onclick="handleClick(this)">
@@ -177,10 +177,8 @@
 
     <script>
         function handleClick(element) {
-            // Get the ID of the clicked suggestion
             const id = element.getAttribute('data-id');
     
-            // Find the corresponding question and answer
             const qaDiv = document.querySelector(`.question_answer[data-id="${id}"]`);
             if (qaDiv) {
                 const question = qaDiv.querySelector('.question').textContent;
