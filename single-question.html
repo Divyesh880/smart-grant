@@ -75,14 +75,18 @@
                 </span>
             </div>
             <div class="dropdown_box">
-                <span class="text-black">Hi, John Thompson</span>
+                <span class="text-black">Hi, User</span>
                 <!-- <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()"> -->
-                <i class="fa-solid fa-circle-chevron-down dropdown_image" onclick="toggleDropdown()"></i>
-                <div class="d-inline-flex"><a href="index.html" class="login_btn">Login</a></div>
-                <div class="dropdown_content" id="profile_dropdown">
+                <!-- <i class="fa-solid fa-circle-chevron-down dropdown_image" onclick="toggleDropdown()"></i> 
+                 <div class="dropdown_content" id="profile_dropdown">
                     <a href="#">GPT-4o</a>
                     <a href="#">Claude 3.5</a>
-                </div>
+                </div> -->
+                 <select name="" id="" class="header_dropdown dropdown_arrow">
+                    <option value="GPT-4o" selected>GPT-4o</option>
+                    <option value="Claude 3.5">Claude 3.5</option>
+                 </select>
+                <div class="d-inline-flex"><a href="index.html" class="login_btn">Login</a></div>
             </div>
         </div>
 
@@ -135,21 +139,24 @@
                                     <div class="question_answer" data-id="1">
                                         <div class="question">Describe the need being addressed and your organization's unique role in meeting those needs, including anything that would distinguish your organization from others.</div>
                                         <div class="answer">
-                                            <p>Kairos Spark tackles a big problem for small non-profits: they spend up to 50% of their time on grant writing instead of driving their missions. Our AI-powered tool, GrantForge, transforms this process into an efficient, personalized experience, helping organizations craft compelling proposals quickly and effectively.</p>
+                                            <p><strong>Question:</strong> Describe the need being addressed and your organization's unique role in meeting those needs, including anything that would distinguish your organization from others.</p>
+                                            <p><strong>Response: </strong> Kairos Spark tackles a big problem for small non-profits: they spend up to 50% of their time on grant writing instead of driving their missions. Our AI-powered tool, GrantForge, transforms this process into an efficient, personalized experience, helping organizations craft compelling proposals quickly and effectively.</p>
                                             <p>What sets us apart? We focus on empowering small organizations, combining cutting-edge AI with empathy and humor. GrantForge doesn’t just automate; it tailors suggestions to each non-profit’s unique voice, making grant writing smarter and even a bit fun. By freeing up time and boosting success rates, we help non-profits secure more funding and multiply their impact. Kairos Spark isn’t just solving a problem—we’re amplifying hope and transforming communities.</p>
                                         </div>
                                     </div>
                                     <div class="question_answer" data-id="2">
                                         <div class="question">How do you involve the community?</div>
                                         <div class="answer">
-                                            <p>At Kairos Spark, we don’t just involve the community—we co-create magic with them! We work hand-in-hand with non-profits, gathering feedback and ideas to continuously fine-tune GrantForge. Think of it as a potluck for innovation—everyone brings their unique flavor, and together we create something extraordinary.</p>
+                                            <p><strong>Question: </strong> How do you involve the community?</p>
+                                            <p><strong>Response: </strong> At Kairos Spark, we don’t just involve the community—we co-create magic with them! We work hand-in-hand with non-profits, gathering feedback and ideas to continuously fine-tune GrantForge. Think of it as a potluck for innovation—everyone brings their unique flavor, and together we create something extraordinary.</p>
                                             <p>We also host virtual “Grant Jams,” where non-profits can share their challenges, swap grant-writing hacks, and even test-drive our tool in a fun, collaborative setting. Plus, we love celebrating wins—when a non-profit lands funding, we cheer them on louder than a pep rally! For us, it’s not just about providing a tool; it’s about building a community of changemakers who uplift one another. Fill <a href="https://docs.google.com/forms/d/17lbtcqtIRYOgjF9XrSdh1Sxt25M6LnvOQ0MgiPTM9l8/edit">form</a> if you want to be partnering</p>
                                         </div>
                                     </div>
                                     <div class="question_answer" data-id="3">
                                         <div class="question">Share how have you used past grants and what success have you achieved because of them?</div>
                                         <div class="answer">
-                                            <p>If "past grants" were a thing for us, they'd be like unicorns—legendary, awe-inspiring, and yet to gallop into reality! But here’s the magic we’re gearing up for: with GrantForge, non-profits could turn grant applications into success stories. Imagine securing funding to double a food pantry’s outreach or build a new wing for an animal shelter. We’re all about transforming dreams into impact, one (soon-to-be) grant at a time! Want to be part of this new drive? Fill <a href="https://docs.google.com/forms/d/17lbtcqtIRYOgjF9XrSdh1Sxt25M6LnvOQ0MgiPTM9l8/edit">form</a>.</p>
+                                            <p><strong>Question: </strong> Share how have you used past grants and what success have you achieved because of them?</p>
+                                            <p><strong>Response: </strong> If "past grants" were a thing for us, they'd be like unicorns—legendary, awe-inspiring, and yet to gallop into reality! But here’s the magic we’re gearing up for: with GrantForge, non-profits could turn grant applications into success stories. Imagine securing funding to double a food pantry’s outreach or build a new wing for an animal shelter. We’re all about transforming dreams into impact, one (soon-to-be) grant at a time! Want to be part of this new drive? Fill <a href="https://docs.google.com/forms/d/17lbtcqtIRYOgjF9XrSdh1Sxt25M6LnvOQ0MgiPTM9l8/edit">form</a>.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +175,7 @@
         <div class="footer_block print_none">
             <footer>
                 <div class="text-center">
-                    <span>Kairos Spark Questionnaire | © 2024 Kairos Spark. All rights reserved.</span>
+                    <span><a href="https://docs.google.com/forms/d/17lbtcqtIRYOgjF9XrSdh1Sxt25M6LnvOQ0MgiPTM9l8/edit">Have a question? Reach out to us</a> | © 2024 Kairos Spark. All rights reserved.</span>
                 </div>
             </footer>
         </div>
@@ -203,15 +210,6 @@
             }
         }
     </script>
-    
-
-    <!-- <script>
-        // Type related text in textbox when I click on any suggestions
-        function addToTextbox(element) {
-            const suggestionText = document.getElementById("suggestion_text");
-            suggestionText.value = element.innerText;
-        }
-    </script> -->
 
     <script>
         // Table Print and View Fullscreen Sript Start
