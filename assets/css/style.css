@@ -131,7 +131,7 @@ a {
 .sidenav_bar.collapsed .site_logo img { width: 50px; }
 
 .top_header {
-    /* background-color: var(--dark-purple); */
+    background-color: #fff;
     color: var(--light-color);
     top: 0;
     padding: 15px;
@@ -777,6 +777,7 @@ table tr td { vertical-align: middle; }
     .nav { flex-direction: column; align-items: center; }
     .side_box { flex-direction: column; }
     .input_row { flex-direction: column; }
+    .center_box { display: block; height: auto; margin-top: 65px; }
 }
 
 @media (min-width: 1421px) and (max-width:1600px) { .card_description { height: 165px; } }
@@ -806,6 +807,7 @@ table tr td { vertical-align: middle; }
     .dropdown_arrow { background-position: calc(100% - 0px) center; padding-right: 12px; }
     .header_dropdown { padding-left: 4px; font-size: 15px; width: 105px; }
     .dropdown_box { gap: 5px; }
+    .center_box { height: auto; }
 }
 
 @media screen and (max-width: 500px) {
