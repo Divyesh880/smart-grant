@@ -69,10 +69,14 @@
     <div id="main_container">
 
         <div class="top_header">
-            <div>
+            <div class="left_header">
                 <span onclick="toggleNav()">
                     <i onclick="iconChange(this)" class="sidebar_toggle_btn fa-regular fa-hard-drive"></i>
                 </span>
+                <select name="" id="" class="header_dropdown dropdown_arrow">
+                    <option value="GPT-4o" selected>GPT-4o</option>
+                    <option value="Claude 3.5">Claude 3.5</option>
+                </select>
             </div>
             <div class="dropdown_box">
                 <!-- <img src="assets/images/header/profile.png" alt="Profile" class="dropdown_image" onclick="toggleDropdown()"> -->
@@ -103,22 +107,12 @@
                             <div>
 
                                 <div class="pt-3 pb-2">
-
-                                    <div class="text-center mb-3">
-                                        <span>Using: </span>
-                                        <select name="" id="" class="header_dropdown dropdown_arrow">
-                                            <option value="GPT-4o" selected>GPT-4o</option>
-                                            <option value="Claude 3.5">Claude 3.5</option>
-                                        </select>
-                                    </div>
-                                    
                                     <div class="text_box_wrap">
                                         <input type="text" placeholder="Type your question here..." class="text_box" id="suggestion_text">
                                         <button type="button" class="btn textbox_btn">
                                             <i class="fa-solid fa-share"></i>
                                         </button>
                                     </div>
-
                                 </div>
 
                                 <div class="suggestion_box_full">
